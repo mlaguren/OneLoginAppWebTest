@@ -1,0 +1,1 @@
+default: URL=http://app.onelogin.com -r features/step_definitions -r features/support features

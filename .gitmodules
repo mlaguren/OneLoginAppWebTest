@@ -1,0 +1,3 @@
+[submodule "OneLogin-PageObjects"]
+	path = OneLogin-PageObjects
+	url = git@github.com:mlaguren/OneLogin-PageObjects.git
