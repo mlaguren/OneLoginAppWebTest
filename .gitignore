@@ -1,0 +1,5 @@
+config/environment/production.yml
+.bundle/
+.ruby-version
+vendor/
+*.html
