@@ -1,6 +1,6 @@
 Given(/^I have logged into OneLogin$/) do
   FromLoginPage = LoginPage.new
-  FromLoginPage.login_as("", "")  
+  FromLoginPage.login_as($SETUP["user"]["email"], $SETUP["user"]["password"])  
 end
 
 Given(/^I have been inactive for "(.*?)"$/) do |timeout|

@@ -1,4 +1,4 @@
-config/environment/production.yml
+config/environments/production.yml
 .bundle/
 .ruby-version
 vendor/

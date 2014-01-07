@@ -1,1 +1,2 @@
-default: URL=http://app.onelogin.com -r features/step_definitions -r features/support features
+default: -r features/step_definitions -r features/support features
+production:  ENVIRONMENT=production.yml --profile default

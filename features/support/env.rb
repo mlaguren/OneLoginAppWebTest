@@ -14,6 +14,8 @@ Dir.glob(File.join("./OneLogin-PageObjects", "**", "*.rb")).each do |file|
    require file
 end
 
+$SETUP = YAML::load(File.open("config/environments/#{ENV['ENVIRONMENT']}"))
+
 Capybara.register_driver :selenium_chrome do |app|
   Capybara::Selenium::Driver.new(app, :browser => :chrome)
 end
