@@ -1,7 +1,7 @@
 Feature:  Users are signed out of OneLogin when inactive
 
 @zendesk
-
+@sauce
 Scenario:  After being inactive, I need to sign back in when launching an application
 
 Given I have logged into OneLogin

@@ -14,7 +14,9 @@ Given(/^I have been inactive for "(.*?)"$/) do |timeout|
   FromEditPolicyPage.click_on("Session")
   FromEditPolicyPage.set_session_timeout(timeout)
   FromEditPolicyPage.save_policy
-  
+
+  FromEditPolicyPage.go_to_home 
+  session_sleep(timeout) 
   sleep 5 
 end
 

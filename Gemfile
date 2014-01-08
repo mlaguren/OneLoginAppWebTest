@@ -9,3 +9,4 @@ gem "json", "1.8.0"
 gem "parallel_tests"
 gem "sauce-cucumber", "~> 3.2.1", :require => false
 gem "rspec"
+gem "activesupport", "~> 4.0.2"

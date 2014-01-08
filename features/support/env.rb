@@ -34,7 +34,7 @@ end
 
 Sauce.config do |c|
   c[:browsers] = [["Windows 7", "Internet Explorer", "9"]]
-  c[:name] = "OneLogin IE Extension"
-  c[:prerun] = "https://app.onelogin.com/system/extensions/onelogin_ie.exe"
+  c[:name] = "Regression"
+#  c[:prerun] = "https://app.onelogin.com/system/extensions/onelogin_ie.exe"
 end
 
