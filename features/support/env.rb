@@ -25,6 +25,12 @@ Capybara.register_driver :selenium_safari do |app|
   Capybara::Selenium::Driver.new(app, :browser => :safari)
 end
 
+Capybara.register_driver :firefox_extension do |app|
+  profile = Selenium::WebDriver::Firefox::Profile.new
+  profile.add_extension "/Users/melvinlaguren/Library/Application Support/Firefox/Profiles/xyw27iae.default/extensions/extension@onelogin.com.xpi"
+  Capybara::Selenium::Driver.new(app, :browser => :firefox, :profile => profile)
+end
+
 Capybara.configure do |config|
   config.default_driver = :selenium
   config.javascript_driver = :poltergeist
