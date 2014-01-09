@@ -1,2 +1,2 @@
-default: -r features/step_definitions -r features/support features
-production:  ENVIRONMENT=production.yml --profile default
+default: --profile production -r features/step_definitions -r features/support features
+production:  ENVIRONMENT=production.yml

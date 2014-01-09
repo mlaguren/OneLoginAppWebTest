@@ -11,7 +11,8 @@ require 'rspec'
 require 'rspec/expectations'
 
 Dir.glob(File.join("./OneLogin-PageObjects", "**", "*.rb")).each do |file|
-   require file
+  p file
+  require file
 end
 
 $SETUP = YAML::load(File.open("config/environments/#{ENV['ENVIRONMENT']}"))

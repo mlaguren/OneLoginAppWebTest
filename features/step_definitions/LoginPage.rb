@@ -17,6 +17,9 @@ Given(/^I have been inactive for "(.*?)"$/) do |timeout|
 
   FromEditPolicyPage.go_to_home 
   session_sleep(timeout) 
+  
+  FromClientAppsPage = ClientAppsPage.new
+  FromClientAppsPage.select_any_app
   sleep 5 
 end
 
