@@ -11,7 +11,6 @@ require 'rspec'
 require 'rspec/expectations'
 
 Dir.glob(File.join("./OneLogin-PageObjects", "**", "*.rb")).each do |file|
-  p file
   require file
 end
 
@@ -39,9 +38,15 @@ Capybara.configure do |config|
   config.app_host = "http://app.onelogin.com"
 end
 
+Capybara.register_driver :sauce_firefox do 
+  caps = Selenium::WebDriver::Remote::Capabilities.firefox
+  caps.platform = "Windows XP"
+  caps.version = "3.6"
+end
+
 Sauce.config do |c|
-  c[:browsers] = [["Windows 7", "Internet Explorer", "9"]]
+  c[:browsers] = [["Windows 7", "Firefox", "24"]]
   c[:name] = "Regression"
-#  c[:prerun] = "https://app.onelogin.com/system/extensions/onelogin_ie.exe"
+  c[:prerun] = "https://app.onelogin.com/system/extensions/onelogin.xpi"
 end
 

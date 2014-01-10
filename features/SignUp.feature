@@ -1,6 +1,6 @@
-Feature:  Sign Up for a free OneLogin account
+Feature: Sign Up for a free OneLogin account
 
-Scenario:  Register for a OneLogin account
+Scenario: Register for a OneLogin account
 
 When I sign up for a OneLogin trial account
   And I create a password
