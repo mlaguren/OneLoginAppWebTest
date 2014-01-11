@@ -1,3 +1,4 @@
+require 'simple-password-gen'
 require 'capybara'
 require 'capybara/dsl'
 require 'capybara/cucumber'
@@ -9,12 +10,17 @@ require 'sauce/cucumber'
 require 'yaml'
 require 'rspec'
 require 'rspec/expectations'
+require 'random-word'
+require 'faker'
 
 Dir.glob(File.join("./OneLogin-PageObjects", "**", "*.rb")).each do |file|
   require file
+  p file 
 end
 
 $SETUP = YAML::load(File.open("config/environments/#{ENV['ENVIRONMENT']}"))
+
+I18n.enforce_available_locales = false
 
 Capybara.register_driver :selenium_chrome do |app|
   Capybara::Selenium::Driver.new(app, :browser => :chrome)
