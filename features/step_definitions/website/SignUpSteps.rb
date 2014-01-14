@@ -13,9 +13,9 @@ end
 When(/^I set a password$/) do
   FromPasswordPage = PasswordPage.new
   FromPasswordPage.enter_new_password
-  sleep 20
 end
 
 Then(/^I am logged into the OneLogin application$/) do
-  pending # express the regexp above with the code you wish you had
+  FromClientAppsPage = ClientAppsPage.new
+  FromClientAppsPage.user_is_logged_in
 end

@@ -1,5 +1,6 @@
 Feature: Sign Up for a free OneLogin account
 
+@admin
 Scenario: Register for a OneLogin account
 
 When I sign up for a OneLogin trial account

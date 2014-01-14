@@ -56,3 +56,8 @@ Sauce.config do |c|
   c[:prerun] = "https://app.onelogin.com/system/extensions/onelogin.xpi"
 end
 
+set_trace_func proc { |event, file, line, id, binding, classname|
+  if classname == "TraceObject"
+    printf "%8s %s:%-2d %10s %8s\n", event, file, line, id, classname
+  end
+}

@@ -3,3 +3,5 @@ config/environments/production.yml
 .bundle/
 .ruby-version
 vendor/
+admin.json
+index.html
