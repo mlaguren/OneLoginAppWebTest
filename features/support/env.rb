@@ -12,13 +12,13 @@ require 'rspec'
 require 'rspec/expectations'
 require 'random-word'
 require 'faker'
+require 'guard'
 
 Dir.glob(File.join("./OneLogin-PageObjects", "**", "*.rb")).each do |file|
   require file
-  p file 
 end
 
-$SETUP = YAML::load(File.open("config/environments/#{ENV['ENVIRONMENT']}"))
+$SETUP = YAML::load(File.open("config/environments/production.yml"))
 
 I18n.enforce_available_locales = false
 
@@ -41,7 +41,7 @@ Capybara.configure do |config|
   config.javascript_driver = :poltergeist
   config.run_server = false
   config.default_selector = :css
-  config.app_host = "http://app.onelogin.com"
+  config.app_host = $SETUP['url']
 end
 
 Capybara.register_driver :sauce_firefox do 

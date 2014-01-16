@@ -4,6 +4,7 @@ Given(/^I have logged into OneLogin$/) do
 end
 
 Given(/^I have been inactive for "(.*?)"$/) do |timeout|
+  sleep 5
   FromAppsPage = ClientAppsPage.new
   FromAppsPage.select_from_Settings_menu("Policies")
 
