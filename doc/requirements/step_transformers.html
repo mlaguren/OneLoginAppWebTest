@@ -96,9 +96,9 @@
   <div class="title">Step Definitions &amp; Transforms</div>
 
   <div class="summary">
-    <div>6<a href="#step_definitions">Step Definitions</a></div>
+    <div>14<a href="#step_definitions">Step Definitions</a></div>
     <div>0<a href="#step_transforms">Step Transforms</a></div>
-    <div>3<a href="#undefined_steps">Undefined Steps</a></div>
+    <div>0<a href="#undefined_steps">Undefined Steps</a></div>
   </div>
 
 </div><div class="title">
@@ -117,8 +117,90 @@
 
 <div class="transformer stepdefinition
                         
-                        ">
+                        pending">
   <a name="step_definition1-stepdefinition"></a>
+  <div class="title">
+    <span class="pre">Given</span>
+    <span class="name">/^I am on the new user page$/</span>
+    <div style="float: right;">
+      <a href="http://rubular.com/?regex=%2F%5EI+am+on+the+new+user+page%24%2F" target="_blank">Rubular</a>
+      | PENDING
+      
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+
+  <div class="details">
+    
+    <div class="meta" style="clear: right;">
+      <div class="file">features/step_definitions/app/NewUser.rb:1</div>
+    </div>
+    
+    <!-- Comments -->
+    <div>
+      
+    </div>
+    
+
+    <!-- Source Code -->
+    <div class="method_details_list">
+      <table class="source_code">
+        <tr>
+          <td>
+            <pre class="lines">1
+2
+3</pre>
+          </td>
+          <td>
+            <pre class="code"><span class='const'>Given</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^I am on the new user page$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_pending'>pending</span> <span class='comment'># express the regexp above with the code you wish you had
+</span><span class='kw'>end</span></pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Matching Step Instances -->
+    
+      <div class='showSteps'>
+        [<a href='#' class='toggleSteps' alt="2 steps">Hide 2 steps</a>]
+      </div>
+    
+    <div class="steps">
+      
+      
+      <div class="step odd">
+        <div>
+          <span class="predicate">
+            Given 
+          </span>
+          <span class="defined">
+            I am on the new user page
+          </span>
+        </div>
+        
+        <a class="definition" style="clear: right;" href="features/app/NewUser.html">features/app/NewUser.feature:6</a>
+        
+        <a class="definition" style="clear: right;" href="features/app/NewUser.html">features/app/NewUser.feature:12</a>
+        
+        <div style="clear: both;"></div>
+      </div>
+      
+      
+    </div>
+    
+  </div>
+
+  <div style="margin: 30px 20px; border-top: 1px dotted #AAA;"></div>
+
+</div>
+
+
+
+<div class="transformer stepdefinition
+                        
+                        ">
+  <a name="step_definition6-stepdefinition"></a>
   <div class="title">
     <span class="pre">Given</span>
     <span class="name">/^I have logged into OneLogin$/</span>
@@ -133,7 +215,7 @@
   <div class="details">
     
     <div class="meta" style="clear: right;">
-      <div class="file">features/step_definitions/LoginPage.rb:1</div>
+      <div class="file">features/step_definitions/app/LoginPageSteps.rb:1</div>
     </div>
     
     <!-- Comments -->
@@ -165,7 +247,7 @@
     <!-- Matching Step Instances -->
     
       <div class='showSteps'>
-        [<a href='#' class='toggleSteps' alt="1 steps">Hide 1 steps</a>]
+        [<a href='#' class='toggleSteps' alt="2 steps">Hide 2 steps</a>]
       </div>
     
     <div class="steps">
@@ -181,7 +263,9 @@
           </span>
         </div>
         
-        <a class="definition" style="clear: right;" href="features/SessionInactivity.html">features/SessionInactivity.feature:8</a>
+        <a class="definition" style="clear: right;" href="features/app/Login.html">features/app/Login.feature:4</a>
+        
+        <a class="definition" style="clear: right;" href="features/app/SessionInactivity.html">features/app/SessionInactivity.feature:8</a>
         
         <div style="clear: both;"></div>
       </div>
@@ -200,7 +284,331 @@
 <div class="transformer stepdefinition
                         
                         ">
-  <a name="step_definition2-stepdefinition"></a>
+  <a name="step_definition14-stepdefinition"></a>
+  <div class="title">
+    <span class="pre">Then</span>
+    <span class="name">/^I am logged into the OneLogin application$/</span>
+    <div style="float: right;">
+      <a href="http://rubular.com/?regex=%2F%5EI+am+logged+into+the+OneLogin+application%24%2F" target="_blank">Rubular</a>
+      
+      
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+
+  <div class="details">
+    
+    <div class="meta" style="clear: right;">
+      <div class="file">features/step_definitions/website/SignUpSteps.rb:18</div>
+    </div>
+    
+    <!-- Comments -->
+    <div>
+      
+    </div>
+    
+
+    <!-- Source Code -->
+    <div class="method_details_list">
+      <table class="source_code">
+        <tr>
+          <td>
+            <pre class="lines">18
+19
+20
+21</pre>
+          </td>
+          <td>
+            <pre class="code"><span class='const'>Then</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^I am logged into the OneLogin application$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+  <span class='const'>FromClientAppsPage</span> <span class='op'>=</span> <span class='const'>ClientAppsPage</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='const'>FromClientAppsPage</span><span class='period'>.</span><span class='id identifier rubyid_user_is_logged_in'>user_is_logged_in</span>
+<span class='kw'>end</span></pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Matching Step Instances -->
+    
+      <div class='showSteps'>
+        [<a href='#' class='toggleSteps' alt="2 steps">Hide 2 steps</a>]
+      </div>
+    
+    <div class="steps">
+      
+      
+      <div class="step odd">
+        <div>
+          <span class="predicate">
+            Then 
+          </span>
+          <span class="defined">
+            I am logged into the OneLogin application
+          </span>
+        </div>
+        
+        <a class="definition" style="clear: right;" href="features/app/Login.html">features/app/Login.feature:5</a>
+        
+        <a class="definition" style="clear: right;" href="features/website/SignUp.html">features/website/SignUp.feature:10</a>
+        
+        <div style="clear: both;"></div>
+      </div>
+      
+      
+    </div>
+    
+  </div>
+
+  <div style="margin: 30px 20px; border-top: 1px dotted #AAA;"></div>
+
+</div>
+
+
+
+<div class="transformer stepdefinition
+                        
+                        pending">
+  <a name="step_definition4-stepdefinition"></a>
+  <div class="title">
+    <span class="pre">When</span>
+    <span class="name">/^I import users$/</span>
+    <div style="float: right;">
+      <a href="http://rubular.com/?regex=%2F%5EI+import+users%24%2F" target="_blank">Rubular</a>
+      | PENDING
+      
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+
+  <div class="details">
+    
+    <div class="meta" style="clear: right;">
+      <div class="file">features/step_definitions/app/NewUser.rb:13</div>
+    </div>
+    
+    <!-- Comments -->
+    <div>
+      
+    </div>
+    
+
+    <!-- Source Code -->
+    <div class="method_details_list">
+      <table class="source_code">
+        <tr>
+          <td>
+            <pre class="lines">13
+14
+15</pre>
+          </td>
+          <td>
+            <pre class="code"><span class='const'>When</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^I import users$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_pending'>pending</span> <span class='comment'># express the regexp above with the code you wish you had
+</span><span class='kw'>end</span></pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Matching Step Instances -->
+    
+      <div class='showSteps'>
+        [<a href='#' class='toggleSteps' alt="1 steps">Hide 1 steps</a>]
+      </div>
+    
+    <div class="steps">
+      
+      
+      <div class="step odd">
+        <div>
+          <span class="predicate">
+            When 
+          </span>
+          <span class="defined">
+            I import users
+          </span>
+        </div>
+        
+        <a class="definition" style="clear: right;" href="features/app/NewUser.html">features/app/NewUser.feature:13</a>
+        
+        <div style="clear: both;"></div>
+      </div>
+      
+      
+    </div>
+    
+  </div>
+
+  <div style="margin: 30px 20px; border-top: 1px dotted #AAA;"></div>
+
+</div>
+
+
+
+<div class="transformer stepdefinition
+                        
+                        pending">
+  <a name="step_definition5-stepdefinition"></a>
+  <div class="title">
+    <span class="pre">Then</span>
+    <span class="name">/^the users are created$/</span>
+    <div style="float: right;">
+      <a href="http://rubular.com/?regex=%2F%5Ethe+users+are+created%24%2F" target="_blank">Rubular</a>
+      | PENDING
+      
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+
+  <div class="details">
+    
+    <div class="meta" style="clear: right;">
+      <div class="file">features/step_definitions/app/NewUser.rb:17</div>
+    </div>
+    
+    <!-- Comments -->
+    <div>
+      
+    </div>
+    
+
+    <!-- Source Code -->
+    <div class="method_details_list">
+      <table class="source_code">
+        <tr>
+          <td>
+            <pre class="lines">17
+18
+19</pre>
+          </td>
+          <td>
+            <pre class="code"><span class='const'>Then</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^the users are created$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_pending'>pending</span> <span class='comment'># express the regexp above with the code you wish you had
+</span><span class='kw'>end</span></pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Matching Step Instances -->
+    
+      <div class='showSteps'>
+        [<a href='#' class='toggleSteps' alt="1 steps">Hide 1 steps</a>]
+      </div>
+    
+    <div class="steps">
+      
+      
+      <div class="step odd">
+        <div>
+          <span class="predicate">
+            Then 
+          </span>
+          <span class="defined">
+            the users are created
+          </span>
+        </div>
+        
+        <a class="definition" style="clear: right;" href="features/app/NewUser.html">features/app/NewUser.feature:14</a>
+        
+        <div style="clear: both;"></div>
+      </div>
+      
+      
+    </div>
+    
+  </div>
+
+  <div style="margin: 30px 20px; border-top: 1px dotted #AAA;"></div>
+
+</div>
+
+
+
+<div class="transformer stepdefinition
+                        
+                        pending">
+  <a name="step_definition3-stepdefinition"></a>
+  <div class="title">
+    <span class="pre">Then</span>
+    <span class="name">/^the new user can login$/</span>
+    <div style="float: right;">
+      <a href="http://rubular.com/?regex=%2F%5Ethe+new+user+can+login%24%2F" target="_blank">Rubular</a>
+      | PENDING
+      
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+
+  <div class="details">
+    
+    <div class="meta" style="clear: right;">
+      <div class="file">features/step_definitions/app/NewUser.rb:9</div>
+    </div>
+    
+    <!-- Comments -->
+    <div>
+      
+    </div>
+    
+
+    <!-- Source Code -->
+    <div class="method_details_list">
+      <table class="source_code">
+        <tr>
+          <td>
+            <pre class="lines">9
+10
+11</pre>
+          </td>
+          <td>
+            <pre class="code"><span class='const'>Then</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^the new user can login$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_pending'>pending</span> <span class='comment'># express the regexp above with the code you wish you had
+</span><span class='kw'>end</span></pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Matching Step Instances -->
+    
+      <div class='showSteps'>
+        [<a href='#' class='toggleSteps' alt="1 steps">Hide 1 steps</a>]
+      </div>
+    
+    <div class="steps">
+      
+      
+      <div class="step odd">
+        <div>
+          <span class="predicate">
+            Then 
+          </span>
+          <span class="defined">
+            the new user can login
+          </span>
+        </div>
+        
+        <a class="definition" style="clear: right;" href="features/app/NewUser.html">features/app/NewUser.feature:8</a>
+        
+        <div style="clear: both;"></div>
+      </div>
+      
+      
+    </div>
+    
+  </div>
+
+  <div style="margin: 30px 20px; border-top: 1px dotted #AAA;"></div>
+
+</div>
+
+
+
+<div class="transformer stepdefinition
+                        
+                        ">
+  <a name="step_definition7-stepdefinition"></a>
   <div class="title">
     <span class="pre">Given</span>
     <span class="name">/^I have been inactive for "(.*?)"$/</span>
@@ -215,7 +623,7 @@
   <div class="details">
     
     <div class="meta" style="clear: right;">
-      <div class="file">features/step_definitions/LoginPage.rb:6</div>
+      <div class="file">features/step_definitions/app/LoginPageSteps.rb:6</div>
     </div>
     
     <!-- Comments -->
@@ -287,7 +695,7 @@
           </span>
         </div>
         
-        <a class="definition" style="clear: right;" href="features/SessionInactivity.html">features/SessionInactivity.feature:9</a>
+        <a class="definition" style="clear: right;" href="features/app/SessionInactivity.html">features/app/SessionInactivity.feature:9</a>
         
         <div style="clear: both;"></div>
       </div>
@@ -305,14 +713,14 @@
 
 <div class="transformer stepdefinition
                         
-                        ">
-  <a name="step_definition3-stepdefinition"></a>
+                        pending">
+  <a name="step_definition2-stepdefinition"></a>
   <div class="title">
     <span class="pre">When</span>
-    <span class="name">/^I launch an App$/</span>
+    <span class="name">/^I create a new user$/</span>
     <div style="float: right;">
-      <a href="http://rubular.com/?regex=%2F%5EI+launch+an+App%24%2F" target="_blank">Rubular</a>
-      
+      <a href="http://rubular.com/?regex=%2F%5EI+create+a+new+user%24%2F" target="_blank">Rubular</a>
+      | PENDING
       
     </div>
     <div style="clear: both;"></div>
@@ -321,7 +729,7 @@
   <div class="details">
     
     <div class="meta" style="clear: right;">
-      <div class="file">features/step_definitions/LoginPage.rb:23</div>
+      <div class="file">features/step_definitions/app/NewUser.rb:5</div>
     </div>
     
     <!-- Comments -->
@@ -335,16 +743,14 @@
       <table class="source_code">
         <tr>
           <td>
-            <pre class="lines">23
-24
-25
-26</pre>
+            <pre class="lines">5
+6
+7</pre>
           </td>
           <td>
-            <pre class="code"><span class='const'>When</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^I launch an App$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
-  <span class='const'>FromClientAppsPage</span> <span class='op'>=</span> <span class='const'>ClientAppsPage</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
-  <span class='const'>FromClientAppsPage</span><span class='period'>.</span><span class='id identifier rubyid_select_any_app'>select_any_app</span>
-<span class='kw'>end</span></pre>
+            <pre class="code"><span class='const'>When</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^I create a new user$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_pending'>pending</span> <span class='comment'># express the regexp above with the code you wish you had
+</span><span class='kw'>end</span></pre>
           </td>
         </tr>
       </table>
@@ -365,11 +771,11 @@
             When 
           </span>
           <span class="defined">
-            I launch an App
+            I create a new user
           </span>
         </div>
         
-        <a class="definition" style="clear: right;" href="features/SessionInactivity.html">features/SessionInactivity.feature:10</a>
+        <a class="definition" style="clear: right;" href="features/app/NewUser.html">features/app/NewUser.feature:7</a>
         
         <div style="clear: both;"></div>
       </div>
@@ -388,7 +794,7 @@
 <div class="transformer stepdefinition
                         
                         ">
-  <a name="step_definition4-stepdefinition"></a>
+  <a name="step_definition9-stepdefinition"></a>
   <div class="title">
     <span class="pre">Then</span>
     <span class="name">/^I need to reauthenticate$/</span>
@@ -403,7 +809,7 @@
   <div class="details">
     
     <div class="meta" style="clear: right;">
-      <div class="file">features/step_definitions/LoginPage.rb:28</div>
+      <div class="file">features/step_definitions/app/LoginPageSteps.rb:28</div>
     </div>
     
     <!-- Comments -->
@@ -449,7 +855,7 @@
           </span>
         </div>
         
-        <a class="definition" style="clear: right;" href="features/SessionInactivity.html">features/SessionInactivity.feature:11</a>
+        <a class="definition" style="clear: right;" href="features/app/SessionInactivity.html">features/app/SessionInactivity.feature:11</a>
         
         <div style="clear: both;"></div>
       </div>
@@ -468,7 +874,7 @@
 <div class="transformer stepdefinition
                         
                         ">
-  <a name="step_definition5-stepdefinition"></a>
+  <a name="step_definition10-stepdefinition"></a>
   <div class="title">
     <span class="pre">When</span>
     <span class="name">/^I authenticate with my credentials$/</span>
@@ -483,7 +889,7 @@
   <div class="details">
     
     <div class="meta" style="clear: right;">
-      <div class="file">features/step_definitions/LoginPage.rb:32</div>
+      <div class="file">features/step_definitions/app/LoginPageSteps.rb:32</div>
     </div>
     
     <!-- Comments -->
@@ -531,7 +937,7 @@
           </span>
         </div>
         
-        <a class="definition" style="clear: right;" href="features/SessionInactivity.html">features/SessionInactivity.feature:12</a>
+        <a class="definition" style="clear: right;" href="features/app/SessionInactivity.html">features/app/SessionInactivity.feature:12</a>
         
         <div style="clear: both;"></div>
       </div>
@@ -550,7 +956,7 @@
 <div class="transformer stepdefinition
                         
                         ">
-  <a name="step_definition6-stepdefinition"></a>
+  <a name="step_definition11-stepdefinition"></a>
   <div class="title">
     <span class="pre">Then</span>
     <span class="name">/^I am taken to my App$/</span>
@@ -565,7 +971,7 @@
   <div class="details">
     
     <div class="meta" style="clear: right;">
-      <div class="file">features/step_definitions/LoginPage.rb:37</div>
+      <div class="file">features/step_definitions/app/LoginPageSteps.rb:37</div>
     </div>
     
     <!-- Comments -->
@@ -611,7 +1017,267 @@
           </span>
         </div>
         
-        <a class="definition" style="clear: right;" href="features/SessionInactivity.html">features/SessionInactivity.feature:13</a>
+        <a class="definition" style="clear: right;" href="features/app/SessionInactivity.html">features/app/SessionInactivity.feature:13</a>
+        
+        <div style="clear: both;"></div>
+      </div>
+      
+      
+    </div>
+    
+  </div>
+
+  <div style="margin: 30px 20px; border-top: 1px dotted #AAA;"></div>
+
+</div>
+
+
+
+<div class="transformer stepdefinition
+                        
+                        ">
+  <a name="step_definition12-stepdefinition"></a>
+  <div class="title">
+    <span class="pre">When</span>
+    <span class="name">/^I sign up for a OneLogin trial account$/</span>
+    <div style="float: right;">
+      <a href="http://rubular.com/?regex=%2F%5EI+sign+up+for+a+OneLogin+trial+account%24%2F" target="_blank">Rubular</a>
+      
+      
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+
+  <div class="details">
+    
+    <div class="meta" style="clear: right;">
+      <div class="file">features/step_definitions/website/SignUpSteps.rb:1</div>
+    </div>
+    
+    <!-- Comments -->
+    <div>
+      
+    </div>
+    
+
+    <!-- Source Code -->
+    <div class="method_details_list">
+      <table class="source_code">
+        <tr>
+          <td>
+            <pre class="lines">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11</pre>
+          </td>
+          <td>
+            <pre class="code"><span class='const'>When</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^I sign up for a OneLogin trial account$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_visit'>visit</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://www.onelogin.com</span><span class='tstring_end'>&quot;</span></span>
+  
+  <span class='const'>FromHomePage</span> <span class='op'>=</span> <span class='const'>HomePage</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='const'>FromHomePage</span><span class='period'>.</span><span class='id identifier rubyid_go_to_sign_up'>go_to_sign_up</span>
+  
+  <span class='const'>FromSignUpPage</span> <span class='op'>=</span> <span class='const'>SignUpPage</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='const'>FromSignUpPage</span><span class='period'>.</span><span class='id identifier rubyid_register_new_company'>register_new_company</span>
+  <span class='const'>FromSignUpPage</span><span class='period'>.</span><span class='id identifier rubyid_terms'>terms</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>agree</span><span class='tstring_end'>&quot;</span></span>
+  <span class='const'>FromSignUpPage</span><span class='period'>.</span><span class='id identifier rubyid_sign_up'>sign_up</span>
+<span class='kw'>end</span></pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Matching Step Instances -->
+    
+      <div class='showSteps'>
+        [<a href='#' class='toggleSteps' alt="1 steps">Hide 1 steps</a>]
+      </div>
+    
+    <div class="steps">
+      
+      
+      <div class="step odd">
+        <div>
+          <span class="predicate">
+            When 
+          </span>
+          <span class="defined">
+            I sign up for a OneLogin trial account
+          </span>
+        </div>
+        
+        <a class="definition" style="clear: right;" href="features/website/SignUp.html">features/website/SignUp.feature:8</a>
+        
+        <div style="clear: both;"></div>
+      </div>
+      
+      
+    </div>
+    
+  </div>
+
+  <div style="margin: 30px 20px; border-top: 1px dotted #AAA;"></div>
+
+</div>
+
+
+
+<div class="transformer stepdefinition
+                        
+                        ">
+  <a name="step_definition13-stepdefinition"></a>
+  <div class="title">
+    <span class="pre">When</span>
+    <span class="name">/^I set a password$/</span>
+    <div style="float: right;">
+      <a href="http://rubular.com/?regex=%2F%5EI+set+a+password%24%2F" target="_blank">Rubular</a>
+      
+      
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+
+  <div class="details">
+    
+    <div class="meta" style="clear: right;">
+      <div class="file">features/step_definitions/website/SignUpSteps.rb:13</div>
+    </div>
+    
+    <!-- Comments -->
+    <div>
+      
+    </div>
+    
+
+    <!-- Source Code -->
+    <div class="method_details_list">
+      <table class="source_code">
+        <tr>
+          <td>
+            <pre class="lines">13
+14
+15
+16</pre>
+          </td>
+          <td>
+            <pre class="code"><span class='const'>When</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^I set a password$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+  <span class='const'>FromPasswordPage</span> <span class='op'>=</span> <span class='const'>PasswordPage</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='const'>FromPasswordPage</span><span class='period'>.</span><span class='id identifier rubyid_enter_new_password'>enter_new_password</span>
+<span class='kw'>end</span></pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Matching Step Instances -->
+    
+      <div class='showSteps'>
+        [<a href='#' class='toggleSteps' alt="1 steps">Hide 1 steps</a>]
+      </div>
+    
+    <div class="steps">
+      
+      
+      <div class="step odd">
+        <div>
+          <span class="predicate">
+            And 
+          </span>
+          <span class="defined">
+            I set a password
+          </span>
+        </div>
+        
+        <a class="definition" style="clear: right;" href="features/website/SignUp.html">features/website/SignUp.feature:9</a>
+        
+        <div style="clear: both;"></div>
+      </div>
+      
+      
+    </div>
+    
+  </div>
+
+  <div style="margin: 30px 20px; border-top: 1px dotted #AAA;"></div>
+
+</div>
+
+
+
+<div class="transformer stepdefinition
+                        
+                        ">
+  <a name="step_definition8-stepdefinition"></a>
+  <div class="title">
+    <span class="pre">When</span>
+    <span class="name">/^I launch an App$/</span>
+    <div style="float: right;">
+      <a href="http://rubular.com/?regex=%2F%5EI+launch+an+App%24%2F" target="_blank">Rubular</a>
+      
+      
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+
+  <div class="details">
+    
+    <div class="meta" style="clear: right;">
+      <div class="file">features/step_definitions/app/LoginPageSteps.rb:23</div>
+    </div>
+    
+    <!-- Comments -->
+    <div>
+      
+    </div>
+    
+
+    <!-- Source Code -->
+    <div class="method_details_list">
+      <table class="source_code">
+        <tr>
+          <td>
+            <pre class="lines">23
+24
+25
+26</pre>
+          </td>
+          <td>
+            <pre class="code"><span class='const'>When</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^I launch an App$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+  <span class='const'>FromClientAppsPage</span> <span class='op'>=</span> <span class='const'>ClientAppsPage</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='const'>FromClientAppsPage</span><span class='period'>.</span><span class='id identifier rubyid_select_any_app'>select_any_app</span>
+<span class='kw'>end</span></pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Matching Step Instances -->
+    
+      <div class='showSteps'>
+        [<a href='#' class='toggleSteps' alt="1 steps">Hide 1 steps</a>]
+      </div>
+    
+    <div class="steps">
+      
+      
+      <div class="step odd">
+        <div>
+          <span class="predicate">
+            When 
+          </span>
+          <span class="defined">
+            I launch an App
+          </span>
+        </div>
+        
+        <a class="definition" style="clear: right;" href="features/app/SessionInactivity.html">features/app/SessionInactivity.feature:10</a>
         
         <div style="clear: both;"></div>
       </div>
@@ -649,59 +1315,16 @@
 <div class="transformer">
   <div class="steps">
   
-    
-    <div class="step odd">
-      <div>
-        <span class="predicate">When </span>
-        <span class="undefined">
-          I sign up for a OneLogin trial account
-        </span>
-      </div>
-      
-        <a class="definition" style="clear: right;" href="features/SignUp.html">
-          features/SignUp.feature:5
-        </a>
-      
-      <div style="clear: both;"></div>
+    <div class="steps">
+      <div class="undefined">No undefined steps</div>
     </div>
-    
-    <div class="step even">
-      <div>
-        <span class="predicate">And </span>
-        <span class="undefined">
-          I create a password
-        </span>
-      </div>
-      
-        <a class="definition" style="clear: right;" href="features/SignUp.html">
-          features/SignUp.feature:6
-        </a>
-      
-      <div style="clear: both;"></div>
-    </div>
-    
-    <div class="step odd">
-      <div>
-        <span class="predicate">Then </span>
-        <span class="undefined">
-          I am logged into the OneLogin application
-        </span>
-      </div>
-      
-        <a class="definition" style="clear: right;" href="features/SignUp.html">
-          features/SignUp.feature:7
-        </a>
-      
-      <div style="clear: both;"></div>
-    </div>
-    
     
   </div>
 </div>
 </div>
 
     <div id="footer">
-  Generated on Thu Jan  9 15:58:09 2014 by
+  Generated on Thu Jan 16 16:14:51 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-2.0.0).
 </div>

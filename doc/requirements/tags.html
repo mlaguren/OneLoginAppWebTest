@@ -95,7 +95,7 @@
     <div id="content">
   <div id="tags" class="requirements">
     <script type="text/javascript" charset="utf-8">
-      var tag_list = [ '@firefox_extension','@zendesk' ];
+      var tag_list = [ '@28845','@admin','@firefox_extension','@wip','@zendesk' ];
 
       $(function() {
 
@@ -178,7 +178,10 @@
     </div>
 
     <div class="tags" style="margin-top: 20px;"><span class="name">Tags:</span>
-      <span class="tag" href="tags/firefox_extension.html">@firefox_extension</span>,
+      <span class="tag" href="tags/28845.html">@28845</span>,
+<span class="tag" href="tags/admin.html">@admin</span>,
+<span class="tag" href="tags/firefox_extension.html">@firefox_extension</span>,
+<span class="tag" href="tags/wip.html">@wip</span>,
 <span class="tag" href="tags/zendesk.html">@zendesk</span>
     </div>
 
@@ -190,7 +193,7 @@
       <ul style="padding-left: 0px;">
       
         <li class="feature odd ">
-        <span class='object_link'><a href="features/SignUp.html" title="requirements::features::SignUp (feature)">Sign Up for a free OneLogin account</a></span>
+        <span class='object_link'><a href="features/app/NewUser.html" title="requirements::features::app::NewUser (feature)">Adminstrator can create a users</a></span>
           
           
         </li>
@@ -198,10 +201,73 @@
         
           <ul style="padding-left: 20px;">
           	
-          	<li class="scenario even  ">
+          	<li class="scenario even  @admin">
           	  <span class='object_link'>
-             		<a href="features/SignUp.html#scenario0">
+             		<a href="features/app/NewUser.html#scenario0">
+             		  Admin creates a single new user
+             		</a>
+             	</span>
+             	
+              
+                - <small><span class="tag" href="tags/admin.html">@admin</span></small>
+              
+          	</li>
+            
+          	
+          	<li class="scenario odd  @admin">
+          	  <span class='object_link'>
+             		<a href="features/app/NewUser.html#scenario1">
+             		  Admin can import users
+             		</a>
+             	</span>
+             	
+              
+                - <small><span class="tag" href="tags/admin.html">@admin</span></small>
+              
+          	</li>
+            
+          	
+          </ul>
+        
+      
+        <li class="feature even ">
+        <span class='object_link'><a href="features/website/SignUp.html" title="requirements::features::website::SignUp (feature)">Sign Up for a free OneLogin account</a></span>
+          
+          
+        </li>
+        
+        
+          <ul style="padding-left: 20px;">
+          	
+          	<li class="scenario odd  @wip @admin">
+          	  <span class='object_link'>
+             		<a href="features/website/SignUp.html#scenario0">
              		  Register for a OneLogin account
+             		</a>
+             	</span>
+             	
+              
+                - <small><span class="tag" href="tags/wip.html">@wip</span>, <span class="tag" href="tags/admin.html">@admin</span></small>
+              
+          	</li>
+            
+          	
+          </ul>
+        
+      
+        <li class="feature even ">
+        <span class='object_link'><a href="features/app/Login.html" title="requirements::features::app::Login (feature)">Unit Test</a></span>
+          
+          
+        </li>
+        
+        
+          <ul style="padding-left: 20px;">
+          	
+          	<li class="scenario odd  ">
+          	  <span class='object_link'>
+             		<a href="features/app/Login.html#scenario0">
+             		  Login
              		</a>
              	</span>
              	
@@ -212,8 +278,8 @@
           </ul>
         
       
-        <li class="feature odd ">
-        <span class='object_link'><a href="features/SessionInactivity.html" title="requirements::features::SessionInactivity (feature)">Users are signed out of OneLogin when inactive</a></span>
+        <li class="feature even ">
+        <span class='object_link'><a href="features/app/SessionInactivity.html" title="requirements::features::app::SessionInactivity (feature)">Users are signed out of OneLogin when inactive</a></span>
           
           
         </li>
@@ -221,15 +287,15 @@
         
           <ul style="padding-left: 20px;">
           	
-          	<li class="scenario even  @zendesk @firefox_extension">
+          	<li class="scenario odd  @zendesk @28845 @firefox_extension">
           	  <span class='object_link'>
-             		<a href="features/SessionInactivity.html#scenario0">
+             		<a href="features/app/SessionInactivity.html#scenario0">
              		  After being inactive, I need to sign back in when launching an application
              		</a>
              	</span>
              	
               
-                - <small><span class="tag" href="tags/zendesk.html">@zendesk</span>, <span class="tag" href="tags/firefox_extension.html">@firefox_extension</span></small>
+                - <small><span class="tag" href="tags/zendesk.html">@zendesk</span>, <span class="tag" href="tags/28845.html">@28845</span>, <span class="tag" href="tags/firefox_extension.html">@firefox_extension</span></small>
               
           	</li>
             
@@ -248,7 +314,7 @@
 </div>
 
     <div id="footer">
-  Generated on Thu Jan  9 15:58:09 2014 by
+  Generated on Thu Jan 16 16:14:51 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-2.0.0).
 </div>
