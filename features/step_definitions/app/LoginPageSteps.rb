@@ -1,6 +1,10 @@
 Given(/^I have logged into OneLogin$/) do
   FromLoginPage = LoginPage.new
   FromLoginPage.login_as($SETUP["user"]["email"], $SETUP["user"]["password"])  
+
+  FromClientAppsPage = ClientAppsPage.new
+  FromClientAppsPage.select_Users
+  sleep 5
 end
 
 Given(/^I have been inactive for "(.*?)"$/) do |timeout|

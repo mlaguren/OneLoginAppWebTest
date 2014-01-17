@@ -1,12 +1,25 @@
 Given(/^I am on the new user page$/) do
-  pending # express the regexp above with the code you wish you had
+  FromLoginPage = LoginPage.new
+  FromLoginPage.login_as($SETUP["user"]["email"], $SETUP["user"]["password"])
+
+  FromClientAppsPage = ClientAppsPage.new
+  FromClientAppsPage.select_Users
+
+  FromUsersPage = UsersPage.new
+  FromUsersPage.select_new_user
+  
 end
 
 When(/^I create a new user$/) do
-  pending # express the regexp above with the code you wish you had
+  NewUser=User.new
+  
+  FromNewUserPage = NewUserPage.new
+  FromNewUserPage.enter_basic_user(NewUser)
+  FromNewUserPage.click_cancel  
+  sleep 5
 end
 
-Then(/^the new user can login$/) do
+Then(/^the new user can log in$/) do
   pending # express the regexp above with the code you wish you had
 end
 
