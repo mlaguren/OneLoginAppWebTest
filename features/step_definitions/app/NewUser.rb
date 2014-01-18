@@ -7,7 +7,7 @@ Given(/^I am on the new user page$/) do
 
   FromUsersPage = UsersPage.new
   FromUsersPage.select_new_user
-  
+
 end
 
 When(/^I create a new user$/) do
@@ -15,7 +15,10 @@ When(/^I create a new user$/) do
   
   FromNewUserPage = NewUserPage.new
   FromNewUserPage.enter_basic_user(NewUser)
-  FromNewUserPage.click_cancel  
+#  FromNewUserPage.click_save
+  
+#  FromEditUserPage = EditUserPage.new
+#  FromEditUserPage.select_send_invitation_from_more_actions_menu
   sleep 5
 end
 

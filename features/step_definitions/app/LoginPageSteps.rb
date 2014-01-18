@@ -9,7 +9,7 @@ end
 
 Given(/^I have been inactive for "(.*?)"$/) do |timeout|
   FromAppsPage = ClientAppsPage.new
-  FromAppsPage.select_from_Settings_menu("Policies")
+  FromAppsPage.select_from_settings_menu("Policies")
 
   FromPolicyPage = PoliciesPage.new
   FromPolicyPage.click_policy_by_name("Default Policy")
