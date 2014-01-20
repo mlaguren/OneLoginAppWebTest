@@ -3,7 +3,8 @@
 # If a scenario is tagged with @admin, the admin user will be used in the scenario.
 Before ('@admin') do
 
-  @user_type="admin"
+  $admin_user_file="admin.json"
+  $user_type="admin"
 
 end
 

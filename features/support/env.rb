@@ -15,6 +15,7 @@ require 'faker'
 require 'guard'
 
 Dir.glob(File.join("./OneLogin-PageObjects", "**", "*.rb")).each do |file|
+  p file
   require file
 end
 
@@ -56,8 +57,7 @@ Sauce.config do |c|
   c[:prerun] = "https://app.onelogin.com/system/extensions/onelogin.xpi"
 end
 
-set_trace_func proc { |event, file, line, id, binding, classname|
-  if classname == "TraceObject"
-    printf "%8s %s:%-2d %10s %8s\n", event, file, line, id, classname
-  end
-}
+
+Dir.mkdir('logfiles') unless File.exists?('logfiles')
+Dir.mkdir('logfiles/users') unless File.exists?('logfiles/users')
+

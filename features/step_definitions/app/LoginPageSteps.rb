@@ -3,25 +3,12 @@ Given(/^I have logged into OneLogin$/) do
   FromLoginPage.login_as($SETUP["user"]["email"], $SETUP["user"]["password"])  
 
   FromClientAppsPage = ClientAppsPage.new
-  FromClientAppsPage.select_Users
+  FromClientAppsPage.user_is_logged_in
   sleep 5
 end
 
 Given(/^I have been inactive for "(.*?)"$/) do |timeout|
-  FromAppsPage = ClientAppsPage.new
-  FromAppsPage.select_from_settings_menu("Policies")
-
-  FromPolicyPage = PoliciesPage.new
-  FromPolicyPage.click_policy_by_name("Default Policy")
-
-  FromEditPolicyPage = EditPoliciesPage.new
-  FromEditPolicyPage.click_on("Session")
-  FromEditPolicyPage.set_session_timeout(timeout)
-  FromEditPolicyPage.save_policy
-
-  FromEditPolicyPage.go_to_home 
   session_sleep(timeout) 
-  
 end
 
 When(/^I launch an App$/) do
