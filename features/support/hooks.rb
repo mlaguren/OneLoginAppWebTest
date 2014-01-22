@@ -8,6 +8,11 @@ Before ('@admin') do
 
 end
 
+Before ('@new_user') do
+  $new_user_file="new_user.json"
+  $user_type="user"
+end
+
 Before ('@zendesk') do |scenario|
   tags=scenario.source_tag_names
   p tags

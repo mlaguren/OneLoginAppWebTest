@@ -114,9 +114,11 @@
 <p class="children">
   
     
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="NavigationBar.html" title="NavigationBar (module)">NavigationBar</a></span>, <span class='object_link'><a href="SessionTab.html" title="SessionTab (module)">SessionTab</a></span>, <span class='object_link'><a href="SiteNav.html" title="SiteNav (module)">SiteNav</a></span>, <span class='object_link'><a href="UserMenu.html" title="UserMenu (module)">UserMenu</a></span>
+    
   
     
-      <strong class="classes">Classes:</strong> <span class='object_link'><a href="User.html" title="User (class)">User</a></span>
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="ClientAppsPage.html" title="ClientAppsPage (class)">ClientAppsPage</a></span>, <span class='object_link'><a href="CurrentPage.html" title="CurrentPage (class)">CurrentPage</a></span>, <span class='object_link'><a href="EditPoliciesPage.html" title="EditPoliciesPage (class)">EditPoliciesPage</a></span>, <span class='object_link'><a href="EditUserPage.html" title="EditUserPage (class)">EditUserPage</a></span>, <span class='object_link'><a href="HomePage.html" title="HomePage (class)">HomePage</a></span>, <span class='object_link'><a href="LoginPage.html" title="LoginPage (class)">LoginPage</a></span>, <span class='object_link'><a href="NewUserPage.html" title="NewUserPage (class)">NewUserPage</a></span>, <span class='object_link'><a href="PasswordPage.html" title="PasswordPage (class)">PasswordPage</a></span>, <span class='object_link'><a href="PoliciesPage.html" title="PoliciesPage (class)">PoliciesPage</a></span>, <span class='object_link'><a href="PopUp.html" title="PopUp (class)">PopUp</a></span>, <span class='object_link'><a href="SendInvitation.html" title="SendInvitation (class)">SendInvitation</a></span>, <span class='object_link'><a href="SignUpPage.html" title="SignUpPage (class)">SignUpPage</a></span>, <span class='object_link'><a href="User.html" title="User (class)">User</a></span>, <span class='object_link'><a href="UserDetailPage.html" title="UserDetailPage (class)">UserDetailPage</a></span>, <span class='object_link'><a href="UsersPage.html" title="UsersPage (class)">UsersPage</a></span>
     
   
 </p>
@@ -127,12 +129,181 @@
 
 
 
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
 
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load_user_data-instance_method" title="#load_user_data (instance method)">- (Object) <strong>load_user_data</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#session_sleep-instance_method" title="#session_sleep (instance method)">- (Object) <strong>session_sleep</strong>(timeout) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="load_user_data-instance_method">
+  
+    - (<tt>Object</tt>) <strong>load_user_data</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1
+2
+3</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'OneLogin-PageObjects/helpers/user_type_helper.rb', line 1</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_load_user_data'>load_user_data</span>
+
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="session_sleep-instance_method">
+  
+    - (<tt>Object</tt>) <strong>session_sleep</strong>(timeout) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'OneLogin-PageObjects/helpers/policies_helper.rb', line 3</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_session_sleep'>session_sleep</span><span class='lparen'>(</span><span class='id identifier rubyid_timeout'>timeout</span><span class='rparen'>)</span>
+<span class='comment'>#  Ideally, would love to use this, but need to figure out the string to time interval conversion
+</span><span class='comment'>#   1.minute executes in 1 second
+</span><span class='comment'>#    wait = timeout.gsub(/\s+/, &quot;.&quot;)
+</span><span class='comment'>#    sleep(wait.to_i)
+</span>  <span class='id identifier rubyid_p'>p</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_timeout'>timeout</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1 minute</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_sleep'>sleep</span><span class='lparen'>(</span><span class='int'>61</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_timeout'>timeout</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>15 minutes</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_sleep'>sleep</span><span class='lparen'>(</span><span class='int'>901</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_timeout'>timeout</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>30 minutes</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_sleep'>sleep</span><span class='lparen'>(</span><span class='int'>1801</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_timeout'>timeout</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1 hour</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_sleep'>sleep</span><span class='lparen'>(</span><span class='int'>3601</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_timeout'>timeout</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>2 hours</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_sleep'>sleep</span><span class='lparen'>(</span><span class='int'>7201</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_timeout'>timeout</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>4 hours</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_sleep'>sleep</span><span class='lparen'>(</span><span class='int'>14401</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_timeout'>timeout</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>8 hours</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_sleep'>sleep</span><span class='lparen'>(</span><span class='int'>28801</span><span class='rparen'>)</span> 
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_timeout'>timeout</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1 day</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_sleep'>sleep</span><span class='lparen'>(</span><span class='int'>87301</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_sleep'>sleep</span><span class='lparen'>(</span><span class='int'>10</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_p'>p</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
 
 </div>
 
     <div id="footer">
-  Generated on Thu Jan 16 16:14:51 2014 by
+  Generated on Tue Jan 21 17:10:59 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-2.0.0).
 </div>

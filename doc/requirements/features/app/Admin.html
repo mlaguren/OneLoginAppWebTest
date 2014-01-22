@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>
-  Feature: Adding new user&#39;s to OneLogin App
+  Feature: Basic admin functionality
   
     &mdash; Documentation by YARD 0.8.7.3
   
@@ -35,10 +35,10 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../../../_index.html">Index (N)</a> &raquo;
+    <a href="../../../_index.html">Index (A)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../../requirements.html" title="requirements (requirements)">requirements</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../features.html" title="requirements::features (featuredirectory)">features</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../app.html" title="requirements::features::app (featuredirectory)">app</a></span></span>
      &raquo; 
-    <span class="title">NewUser</span>
+    <span class="title">Admin</span>
   
 
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
@@ -105,7 +105,7 @@ $(function() {
     <a id="expand" class="control" href="#">[Collapse All]</a>
     <div style="clear: right;"></div>
     <span class="pre">Feature:</span>
-    <span class="name">Adding new user's to OneLogin App</span>
+    <span class="name">Basic admin functionality</span>
   </div>
 
   
@@ -115,7 +115,7 @@ $(function() {
   </div>
 
   <div class="meta">
-    <div class="file developer">features/app/NewUser.feature</div>
+    <div class="file developer">features/app/Admin.feature</div>
     <div style="clear: right;"></div>
     <div class="tags developer">
       
@@ -131,7 +131,7 @@ $(function() {
     <div style="float: left;">
       <a class="toggle"> - </a>
       <span class="pre">Scenario:</span>
-      <span class="name">Admin add new user from new user page</span>
+      <span class="name">An admin can assume a user</span>
     </div>
     <a class="link" style="float:right; clear:right;" href="#scenario_0">link</a>
   </div>
@@ -142,12 +142,20 @@ $(function() {
 
   <div class="details">
     <div class="meta developer">
-      <div class="file">features/app/NewUser.feature:4</div>
+      <div class="file">features/app/Admin.feature:8</div>
       
         <div style="clear:right;"></div>
         <div class="tags">
           
-            <a href="../../tags/new_user.html">@new_user</a>
+            <a href="../../tags/zendesk.html">@zendesk</a>
+          
+            <a href="../../tags/29652.html">@29652</a>
+          
+            <a href="../../tags/jira.html">@jira</a>
+          
+            <a href="../../tags/2274.html">@2274</a>
+          
+            <a href="../../tags/admin.html">@admin</a>
           
         </div>
       
@@ -167,9 +175,9 @@ $(function() {
 
       
         <span class="defined">
-          I am on the new user page
+          I am on the users page as an admin
           <div class="definition developer">
-            <a href="../../step_transformers.html#step_definition2-stepdefinition"><div class="valid">&nbsp;</div></a>
+            <a href="../../step_transformers.html#step_definition9-stepdefinition"><div class="valid">&nbsp;</div></a>
           </div>
         </span>
       
@@ -192,9 +200,9 @@ $(function() {
 
       
         <span class="defined">
-          I create a new user
+          I select a user that can be assumed
           <div class="definition developer">
-            <a href="../../step_transformers.html#step_definition3-stepdefinition"><div class="valid">&nbsp;</div></a>
+            <a href="../../step_transformers.html#step_definition10-stepdefinition"><div class="valid">&nbsp;</div></a>
           </div>
         </span>
       
@@ -217,9 +225,34 @@ $(function() {
 
       
         <span class="defined">
-          the new user can log in
+          I can successfully assume the user
           <div class="definition developer">
-            <a href="../../step_transformers.html#step_definition4-stepdefinition"><div class="valid">&nbsp;</div></a>
+            <a href="../../step_transformers.html#step_definition11-stepdefinition"><div class="valid">&nbsp;</div></a>
+          </div>
+        </span>
+      
+
+    
+  </div>
+
+  
+  
+
+
+
+  
+
+  
+  <div class="step even">
+    <span class="predicate">And </span>
+
+    
+
+      
+        <span class="defined">
+          I can return back to admin
+          <div class="definition developer">
+            <a href="../../step_transformers.html#step_definition12-stepdefinition"><div class="valid">&nbsp;</div></a>
           </div>
         </span>
       

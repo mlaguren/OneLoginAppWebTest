@@ -95,7 +95,7 @@
     <div id="content">
   <div id="tags" class="requirements">
     <script type="text/javascript" charset="utf-8">
-      var tag_list = [ '@28845','@admin','@firefox_extension','@wip','@zendesk' ];
+      var tag_list = [ '@2274','@28845','@29652','@admin','@firefox_extension','@jira','@new_user','@wip','@zendesk' ];
 
       $(function() {
 
@@ -178,9 +178,13 @@
     </div>
 
     <div class="tags" style="margin-top: 20px;"><span class="name">Tags:</span>
-      <span class="tag" href="tags/28845.html">@28845</span>,
+      <span class="tag" href="tags/2274.html">@2274</span>,
+<span class="tag" href="tags/28845.html">@28845</span>,
+<span class="tag" href="tags/29652.html">@29652</span>,
 <span class="tag" href="tags/admin.html">@admin</span>,
 <span class="tag" href="tags/firefox_extension.html">@firefox_extension</span>,
+<span class="tag" href="tags/jira.html">@jira</span>,
+<span class="tag" href="tags/new_user.html">@new_user</span>,
 <span class="tag" href="tags/wip.html">@wip</span>,
 <span class="tag" href="tags/zendesk.html">@zendesk</span>
     </div>
@@ -193,7 +197,7 @@
       <ul style="padding-left: 0px;">
       
         <li class="feature odd ">
-        <span class='object_link'><a href="features/app/NewUser.html" title="requirements::features::app::NewUser (feature)">Adminstrator can create a users</a></span>
+        <span class='object_link'><a href="features/app/NewUser.html" title="requirements::features::app::NewUser (feature)">Adding new user's to OneLogin App</a></span>
           
           
         </li>
@@ -201,28 +205,15 @@
         
           <ul style="padding-left: 20px;">
           	
-          	<li class="scenario even  @admin">
+          	<li class="scenario even  @new_user">
           	  <span class='object_link'>
              		<a href="features/app/NewUser.html#scenario0">
-             		  Admin creates a single new user
+             		  Admin add new user from new user page
              		</a>
              	</span>
              	
               
-                - <small><span class="tag" href="tags/admin.html">@admin</span></small>
-              
-          	</li>
-            
-          	
-          	<li class="scenario odd  @admin">
-          	  <span class='object_link'>
-             		<a href="features/app/NewUser.html#scenario1">
-             		  Admin can import users
-             		</a>
-             	</span>
-             	
-              
-                - <small><span class="tag" href="tags/admin.html">@admin</span></small>
+                - <small><span class="tag" href="tags/new_user.html">@new_user</span></small>
               
           	</li>
             
@@ -230,7 +221,32 @@
           </ul>
         
       
-        <li class="feature even ">
+        <li class="feature odd ">
+        <span class='object_link'><a href="features/app/Admin.html" title="requirements::features::app::Admin (feature)">Basic admin functionality</a></span>
+          
+          
+        </li>
+        
+        
+          <ul style="padding-left: 20px;">
+          	
+          	<li class="scenario even  @zendesk @29652 @jira @2274 @admin">
+          	  <span class='object_link'>
+             		<a href="features/app/Admin.html#scenario0">
+             		  An admin can assume a user
+             		</a>
+             	</span>
+             	
+              
+                - <small><span class="tag" href="tags/zendesk.html">@zendesk</span>, <span class="tag" href="tags/29652.html">@29652</span>, <span class="tag" href="tags/jira.html">@jira</span>, <span class="tag" href="tags/2274.html">@2274</span>, <span class="tag" href="tags/admin.html">@admin</span></small>
+              
+          	</li>
+            
+          	
+          </ul>
+        
+      
+        <li class="feature odd ">
         <span class='object_link'><a href="features/website/SignUp.html" title="requirements::features::website::SignUp (feature)">Sign Up for a free OneLogin account</a></span>
           
           
@@ -239,7 +255,7 @@
         
           <ul style="padding-left: 20px;">
           	
-          	<li class="scenario odd  @wip @admin">
+          	<li class="scenario even  @wip @admin">
           	  <span class='object_link'>
              		<a href="features/website/SignUp.html#scenario0">
              		  Register for a OneLogin account
@@ -255,7 +271,7 @@
           </ul>
         
       
-        <li class="feature even ">
+        <li class="feature odd ">
         <span class='object_link'><a href="features/app/Login.html" title="requirements::features::app::Login (feature)">Unit Test</a></span>
           
           
@@ -264,7 +280,7 @@
         
           <ul style="padding-left: 20px;">
           	
-          	<li class="scenario odd  ">
+          	<li class="scenario even  ">
           	  <span class='object_link'>
              		<a href="features/app/Login.html#scenario0">
              		  Login
@@ -278,7 +294,7 @@
           </ul>
         
       
-        <li class="feature even ">
+        <li class="feature odd ">
         <span class='object_link'><a href="features/app/SessionInactivity.html" title="requirements::features::app::SessionInactivity (feature)">Users are signed out of OneLogin when inactive</a></span>
           
           
@@ -287,7 +303,7 @@
         
           <ul style="padding-left: 20px;">
           	
-          	<li class="scenario odd  @zendesk @28845 @firefox_extension">
+          	<li class="scenario even  @zendesk @28845 @firefox_extension">
           	  <span class='object_link'>
              		<a href="features/app/SessionInactivity.html#scenario0">
              		  After being inactive, I need to sign back in when launching an application
@@ -314,7 +330,7 @@
 </div>
 
     <div id="footer">
-  Generated on Thu Jan 16 16:14:51 2014 by
+  Generated on Tue Jan 21 17:11:00 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-2.0.0).
 </div>

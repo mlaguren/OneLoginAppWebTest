@@ -15,7 +15,6 @@ require 'faker'
 require 'guard'
 
 Dir.glob(File.join("./OneLogin-PageObjects", "**", "*.rb")).each do |file|
-  p file
   require file
 end
 

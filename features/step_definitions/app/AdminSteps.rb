@@ -1,19 +1,23 @@
-Given(/^I am on the users page$/) do
+Given(/^I am on the users page as an admin$/) do
   FromLoginPage = LoginPage.new
   FromLoginPage.login_as($SETUP["user"]["email"], $SETUP["user"]["password"])
 
   FromClientAppsPage = ClientAppsPage.new
   FromClientAppsPage.select_Users
-
-  FromUsersPage = UsersPage.new
-  FromUsersPage.select_user
-  sleep 5
 end
 
 When(/^I select a user that can be assumed$/) do
-  pending # express the regexp above with the code you wish you had
+  FromUsersPage = UsersPage.new
+  @selected_user = FromUsersPage.select_user
 end
 
-Then(/^I have successfully assumed the user$/) do
-  pending # express the regexp above with the code you wish you had
+Then(/^I can successfully assume the user$/) do
+  FromUserDetailPage = UserDetailPage.new
+  FromUserDetailPage.assume_user(@selected_user)
+  FromClientAppsPage = ClientAppsPage.new
+end
+
+Then(/^I can return back to admin$/) do
+  FromCurrentPage = CurrentPage.new
+  FromCurrentPage.select_revert_to_admin 
 end

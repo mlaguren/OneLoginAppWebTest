@@ -11,15 +11,20 @@ Given(/^I am on the new user page$/) do
 end
 
 When(/^I create a new user$/) do
-  NewUser=User.new
-  
+  new_user=User.new
+  new_user.save_to_file(new_user,"#{$new_user_file}") 
+
   FromNewUserPage = NewUserPage.new
-  FromNewUserPage.enter_basic_user(NewUser)
-#  FromNewUserPage.click_save
+  FromNewUserPage.enter_basic_user(new_user)
+  FromNewUserPage.click_save
   
-#  FromEditUserPage = EditUserPage.new
-#  FromEditUserPage.select_send_invitation_from_more_actions_menu
-  sleep 5
+  FromEditUserPage = EditUserPage.new
+  FromEditUserPage.select_send_invitation_from_more_actions_menu
+
+  invite = SendInvitation.new
+  invite.verify_users_email(new_user.email)
+  invite.send_invite
+
 end
 
 Then(/^the new user can log in$/) do

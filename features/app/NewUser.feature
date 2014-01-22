@@ -1,5 +1,6 @@
 Feature:  Adding new user's to OneLogin App
 
+@new_user
 Scenario:  Admin add new user from new user page
 
 Given I am on the new user page
