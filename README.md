@@ -1,14 +1,6 @@
 Example of using cucumber for test automation.
 
-Uses the following drivers:
-phantomjs
-selenium (local + sauce labs)
-
-
+Uses the following drivers: phantomjs & selenium (local + Sauce Labs)
 
 
 Page Object Documentation:  http://rubydoc.info/github/mlaguren/OneLogin-PageObjects/frames
-
-
-
-Testing
