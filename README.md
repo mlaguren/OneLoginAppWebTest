@@ -1,9 +1,14 @@
-Example of feature files using OneLogin Page Objects
+Example of using cucumber for test automation.
+
+Uses the following drivers:
+phantomjs
+selenium (local + sauce labs)
+
+
+
 
 Page Object Documentation:  http://rubydoc.info/github/mlaguren/OneLogin-PageObjects/frames
 
-Cucumber Documentation:  http://htmlpreview.github.io/?https://github.com/mlaguren/OneLoginApp-Selenium/blob/master/doc/index.html 
-(Viewable in Chrome)
 
 
 Testing
