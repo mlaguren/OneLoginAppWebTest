@@ -1,5 +1,5 @@
 When(/^I sign up for a OneLogin trial account$/) do
-  visit "http://www.onelogin.com"
+  visit 'http://www.onelogin.com'
   
   FromHomePage = HomePage.new
   FromHomePage.go_to_sign_up
