@@ -53,7 +53,6 @@ end
 Sauce.config do |c|
   c[:browsers] = [["Windows 7", "Firefox", "24"]]
   c[:name] = "Regression"
-  c[:prerun] = "https://app.onelogin.com/system/extensions/onelogin.xpi"
 end
 
 
