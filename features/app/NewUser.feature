@@ -1,5 +1,6 @@
 Feature:  Adding new user's to OneLogin App
 
+@sauce
 @new_user
 Scenario:  Admin add new user from new user page
 
