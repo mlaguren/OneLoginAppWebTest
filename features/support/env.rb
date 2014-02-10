@@ -51,8 +51,8 @@ Capybara.register_driver :sauce_firefox do
 end
 
 Sauce.config do |c|
-  c[:browsers] = [["Windows 7", "Firefox", "24"],["Windows 8", "Internet Explorer", "10"]]
-  c[:name] = "Regression"
+  c[:browsers] = [["#{ENV['OS']}", "#{ENV['BROWSER']}"]]
+  c[:name] = "#{ENV['SUITENAME']}"
 end
 
 
