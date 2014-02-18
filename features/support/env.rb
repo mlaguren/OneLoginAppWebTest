@@ -13,6 +13,9 @@ require 'rspec/expectations'
 require 'random-word'
 require 'faker'
 require 'guard'
+require 'mailosaur'
+require 'awesome_print'
+require 'imgkit'
 
 Dir.glob(File.join("./OneLogin-PageObjects", "**", "*.rb")).each do |file|
   require file
