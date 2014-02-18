@@ -5,3 +5,4 @@ config/environments/production.yml
 vendor/
 admin.json
 index.html
+logfiles/
