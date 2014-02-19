@@ -25,6 +25,7 @@ When(/^I create and invite the new user$/) do
   invite = SendInvitation.new
   invite.verify_users_email(new_user.email)
   invite.send_invite
+#  invite.close_popup
 end
 
 Then(/^the new user receives the OneLogin invite$/) do
