@@ -16,12 +16,14 @@ require 'guard'
 require 'mailosaur'
 require 'awesome_print'
 require 'imgkit'
+require 'socket'
+require 'show_me_the_cookies'
 
 Dir.glob(File.join("./OneLogin-PageObjects", "**", "*.rb")).each do |file|
   require file
 end
 
-$SETUP = YAML::load(File.open("config/environments/production.yml"))
+$SETUP = YAML::load(File.open("config/environments/#{ENV['ENVIRONMENT']}.yml"))
 
 I18n.enforce_available_locales = false
 
@@ -61,4 +63,6 @@ end
 
 Dir.mkdir('logfiles') unless File.exists?('logfiles')
 Dir.mkdir('logfiles/users') unless File.exists?('logfiles/users')
+
+World(ShowMeTheCookies)
 

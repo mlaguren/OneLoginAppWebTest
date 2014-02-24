@@ -1,8 +1,9 @@
 .yardoc
-config/environments/production.yml
+config/environments/*.yml
 .bundle/
 .ruby-version
 vendor/
 admin.json
 index.html
 logfiles/
+sauce/

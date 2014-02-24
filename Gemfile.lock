@@ -129,6 +129,8 @@ GEM
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
       websocket (~> 1.0.4)
+    show_me_the_cookies (2.2.0)
+      capybara (~> 2.0)
     simple-password-gen (0.1.5)
     slop (3.4.7)
     thor (0.18.1)
@@ -167,5 +169,6 @@ DEPENDENCIES
   sauce (= 3.2.0)
   sauce-cucumber (~> 3.2.1)
   selenium-webdriver (= 2.39.0)
+  show_me_the_cookies
   simple-password-gen
   yard-cucumber

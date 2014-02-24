@@ -6,7 +6,6 @@ When(/^I sign up for a OneLogin trial account$/) do
   
   FromSignUpPage = SignUpPage.new
   FromSignUpPage.register_new_company
-#  FromSignUpPage.terms "agree"
-#  FromSignUpPage.sign_up
+  FromSignUpPage.sign_up
 end
 
