@@ -4,7 +4,6 @@ Given(/^I have logged into OneLogin$/) do
 
   FromClientAppsPage = ClientAppsPage.new
   FromClientAppsPage.user_is_logged_in
-  sleep 5
 end
 
 Given(/^I have been inactive for "(.*?)"$/) do |timeout|
@@ -22,7 +21,6 @@ end
 
 When(/^I authenticate with my credentials$/) do
   FromLoginPage.login_as($SETUP["user"]["email"], $SETUP["user"]["password"])
-  sleep 10
 end
 
 Then(/^I am taken to my App$/) do

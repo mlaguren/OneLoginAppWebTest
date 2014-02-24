@@ -5,5 +5,4 @@ Given(/^I am on the users page$/) do
   FromClientAppsPage = ClientAppsPage.new
   FromClientAppsPage.select_Users
 
-  sleep 30 
 end

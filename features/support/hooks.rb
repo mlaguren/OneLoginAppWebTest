@@ -28,5 +28,6 @@ Before ('@sauce, @selenium_chrome') do |scenario|
 end
 
 AfterStep do
-  show_me_the_cookies
+  #show_me_the_cookies
+  sleep 5
 end
