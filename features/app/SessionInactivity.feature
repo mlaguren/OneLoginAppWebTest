@@ -1,6 +1,6 @@
 Feature:  Users are signed out of OneLogin when inactive
 
-@zendesk-28845
+#@zendesk-28845
 @sauce
 Scenario:  After being inactive, I need to sign back in when launching an application
 
