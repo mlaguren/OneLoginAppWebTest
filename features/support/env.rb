@@ -64,5 +64,5 @@ end
 Dir.mkdir('logfiles') unless File.exists?('logfiles')
 Dir.mkdir('logfiles/users') unless File.exists?('logfiles/users')
 
-World(ShowMeTheCookies)
+#World(ShowMeTheCookies)
 

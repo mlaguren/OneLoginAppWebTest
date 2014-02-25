@@ -29,5 +29,5 @@ end
 
 AfterStep do
   #show_me_the_cookies
-  sleep 5
+#  sleep 5
 end
