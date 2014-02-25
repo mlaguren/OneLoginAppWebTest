@@ -29,6 +29,36 @@ Then(/^I do not receive an invalid login$/) do
 end
 
 
+Given(/^I have made an api call$/) do
+  FromLoginPage = LoginPage.new
+  FromLoginPage.login_as($SETUP["user"]["email"], $SETUP["user"]["password"])
 
+  FromClientAppsPage = ClientAppsPage.new
+  FromClientAppsPage.user_is_logged_in
+
+  FromClientAppsPage.select_from_settings_menu('API')
+  FromAPIPage = APIPage.new
+  @api_key = FromAPIPage.get_api_key
+
+  c = Curl::Easy.new("https://app.onelogin.us/api/v2/users.xml")
+  c.http_auth_types = :basic
+  c.username = "#{@api_key}"
+  c.password = "x"
+  c.perform
+  @message =  c.body_str
+
+end
+
+When(/^I change my api key$/) do
+  FromAPIPage = APIPage.new
+  FromAPIPage.generate_new_api_key(@api_key)
+  FromAPIPage.save_api_changes
+  @new_key = FromAPIPage.get_api_key 
+  p @new_key
+end
+
+Then(/^I get the same api call results$/) do
+  pending # express the regexp above with the code you wish you had
+end
 
 
