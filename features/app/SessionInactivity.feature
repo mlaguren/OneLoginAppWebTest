@@ -1,7 +1,6 @@
 Feature:  Users are signed out of OneLogin when inactive
 
 @zendesk-28845
-#@firefox_extension
 @sauce
 Scenario:  After being inactive, I need to sign back in when launching an application
 
