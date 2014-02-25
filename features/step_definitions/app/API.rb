@@ -30,9 +30,12 @@ end
 
 
 Given(/^I have made an api call$/) do
+  ap "Going To Home Page"
   FromLoginPage = LoginPage.new
+  ap "Logging In"
   FromLoginPage.login_as($SETUP["admin"]["email"], $SETUP["admin"]["password"])
 
+  ap "On client Page"
   FromClientAppsPage = ClientAppsPage.new
   FromClientAppsPage.user_is_logged_in
 
