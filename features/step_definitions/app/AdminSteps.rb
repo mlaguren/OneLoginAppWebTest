@@ -1,6 +1,6 @@
 Given(/^I am on the users page as an admin$/) do
   FromLoginPage = LoginPage.new
-  FromLoginPage.login_as($SETUP["user"]["email"], $SETUP["user"]["password"])
+  FromLoginPage.login_as($SETUP["admin"]["email"], $SETUP["admin"]["password"])
 
   FromClientAppsPage = ClientAppsPage.new
   FromClientAppsPage.select_Users
@@ -8,7 +8,7 @@ end
 
 When(/^I select a user that can be assumed$/) do
   FromUsersPage = UsersPage.new
-  @selected_user = FromUsersPage.select_user
+  @selected_user = FromUsersPage.select_user_to_assume
 end
 
 Then(/^I can successfully assume the user$/) do
@@ -19,5 +19,5 @@ end
 
 Then(/^I can return back to admin$/) do
   FromCurrentPage = CurrentPage.new
-  FromCurrentPage.select_revert_to_admin 
+  FromCurrentPage.select_revert_to_admin(@selected_user)
 end

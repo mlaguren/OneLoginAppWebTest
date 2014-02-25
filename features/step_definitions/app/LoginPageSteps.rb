@@ -1,6 +1,6 @@
 Given(/^I have logged into OneLogin$/) do
   FromLoginPage = LoginPage.new
-  FromLoginPage.login_as($SETUP["user"]["email"], $SETUP["user"]["password"])  
+  FromLoginPage.login_as($SETUP["admin"]["email"], $SETUP["admin"]["password"])  
 
   FromClientAppsPage = ClientAppsPage.new
   FromClientAppsPage.user_is_logged_in

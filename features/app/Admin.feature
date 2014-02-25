@@ -3,7 +3,6 @@ Feature:  Basic admin functionality
 @zendesk-29652
 @jira-2274
 @admin
-@sauce
 Scenario:  An admin can assume a user
 
 Given I am on the users page as an admin
