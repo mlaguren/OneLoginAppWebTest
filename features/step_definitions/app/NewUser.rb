@@ -1,6 +1,6 @@
 Given(/^I am on the new user page$/) do
   FromLoginPage = LoginPage.new
-  FromLoginPage.login_as($SETUP["user"]["email"], $SETUP["user"]["password"])
+  FromLoginPage.login_as($SETUP["admin"]["email"], $SETUP["admin"]["password"])
 
   FromClientAppsPage = ClientAppsPage.new
   FromClientAppsPage.select_Users
