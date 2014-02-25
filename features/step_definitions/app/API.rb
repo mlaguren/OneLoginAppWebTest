@@ -1,6 +1,6 @@
 Given(/^I have an api key$/) do
   FromLoginPage = LoginPage.new
-  FromLoginPage.login_as($SETUP["user"]["email"], $SETUP["user"]["password"])
+  FromLoginPage.login_as($SETUP["admin"]["email"], $SETUP["admin"]["password"])
 
   FromClientAppsPage = ClientAppsPage.new
   FromClientAppsPage.user_is_logged_in
@@ -31,7 +31,7 @@ end
 
 Given(/^I have made an api call$/) do
   FromLoginPage = LoginPage.new
-  FromLoginPage.login_as($SETUP["user"]["email"], $SETUP["user"]["password"])
+  FromLoginPage.login_as($SETUP["admin"]["email"], $SETUP["admin"]["password"])
 
   FromClientAppsPage = ClientAppsPage.new
   FromClientAppsPage.user_is_logged_in

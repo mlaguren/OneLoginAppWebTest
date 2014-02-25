@@ -1,6 +1,6 @@
 Given(/^my session timeout is set for "(.*?)"$/) do |timeout|
   FromLoginPage = LoginPage.new
-  FromLoginPage.login_as($SETUP["user"]["email"], $SETUP["user"]["password"])
+  FromLoginPage.login_as($SETUP["admin"]["email"], $SETUP["admin"]["password"])
 
   FromClientAppsPage = ClientAppsPage.new
   FromClientAppsPage.select_from_settings_menu("Policies")
