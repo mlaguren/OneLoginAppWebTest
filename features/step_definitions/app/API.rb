@@ -42,6 +42,7 @@ Given(/^I have made an api call$/) do
   FromClientAppsPage.select_from_settings_menu('API')
   FromAPIPage = APIPage.new
   @api_key = FromAPIPage.get_api_key
+  ap @api_key
 
   c = Curl::Easy.new("https://app.onelogin.us/api/v2/users.xml")
   c.http_auth_types = :basic

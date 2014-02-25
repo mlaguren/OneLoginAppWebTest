@@ -3,7 +3,7 @@ bundle install --path vendor/bundle
 
 if [ -z "$1" ]
 then
-  bundle exec cucumber SUITENAME="Local Test" BROWSER="Internet Explorer" OS="Windows 7" -p staging features/app/*.feature
+  bundle exec cucumber SUITENAME="Local Test" BROWSER="Internet Explorer" OS="Windows 7" -p staging features/app/API.feature:9
 else
   if [ -z "$4" ]
   then
