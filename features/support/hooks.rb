@@ -27,7 +27,8 @@ Before ('@sauce, @selenium_chrome') do |scenario|
   end
 end
 
-AfterStep do
-  #show_me_the_cookies
-#  sleep 5
+Around('@fast') do |scenario, block|
+  Timeout.timeout(360) do
+    block.call
+  end
 end
