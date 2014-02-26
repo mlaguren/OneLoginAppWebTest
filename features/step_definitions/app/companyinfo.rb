@@ -4,6 +4,7 @@ Given(/^I am on the Company Information Page$/) do
 
   FromCurrentPage = CurrentPage.new
   FromCurrentPage.select_from_settings_menu("Company Info")
+  find(:id, "account_name")
   current_path.should == "/accounts/owner/edit"
 end
 
