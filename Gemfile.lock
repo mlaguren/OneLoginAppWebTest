@@ -1,13 +1,13 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (4.0.2)
+    activesupport (4.0.3)
       i18n (~> 0.6, >= 0.6.4)
       minitest (~> 4.2)
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
-    atomic (1.1.14)
+    atomic (1.1.15)
     awesome_print (1.2.0)
     builder (3.2.2)
     capybara (2.1.0)
@@ -40,9 +40,9 @@ GEM
     formatador (0.2.4)
     gherkin (2.12.2)
       multi_json (~> 1.3)
-    guard (2.4.0)
+    guard (2.5.1)
       formatador (>= 0.2.4)
-      listen (~> 2.1)
+      listen (~> 2.6)
       lumberjack (~> 1.0)
       pry (>= 0.9.12)
       thor (>= 0.18.1)
@@ -53,7 +53,7 @@ GEM
     i18n (0.6.9)
     imgkit (1.4.0)
     json (1.7.6)
-    listen (2.5.0)
+    listen (2.6.1)
       celluloid (>= 0.15.2)
       celluloid-io (>= 0.15.0)
       rb-fsevent (>= 0.9.3)
@@ -105,7 +105,7 @@ GEM
     rspec-core (2.14.7)
     rspec-expectations (2.14.5)
       diff-lcs (>= 1.1.3, < 2.0)
-    rspec-mocks (2.14.5)
+    rspec-mocks (2.14.6)
     rubyzip (1.1.0)
     sauce (3.2.0)
       childprocess (>= 0.1.6)
@@ -123,10 +123,10 @@ GEM
       cucumber (>= 1.2.0)
       sauce (~> 3.2.0)
       sauce_whisk (~> 0.0.10)
-    sauce_whisk (0.0.11)
+    sauce_whisk (0.0.12)
       rest-client
-    selenium-webdriver (2.39.0)
-      childprocess (>= 0.2.5)
+    selenium-webdriver (2.40.0)
+      childprocess (>= 0.5.0)
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
       websocket (~> 1.0.4)
@@ -135,8 +135,8 @@ GEM
     simple-password-gen (0.1.5)
     slop (3.4.7)
     thor (0.18.1)
-    thread_safe (0.1.3)
-      atomic
+    thread_safe (0.2.0)
+      atomic (>= 1.1.7, < 2)
     timers (1.1.0)
     tzinfo (0.3.38)
     websocket (1.0.7)
@@ -170,7 +170,7 @@ DEPENDENCIES
   rspec
   sauce (= 3.2.0)
   sauce-cucumber (~> 3.2.1)
-  selenium-webdriver (= 2.39.0)
+  selenium-webdriver (= 2.40.0)
   show_me_the_cookies
   simple-password-gen
   yard-cucumber
