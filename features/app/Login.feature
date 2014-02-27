@@ -1,6 +1,6 @@
 Feature:  Unit Test
 
-@sauce
+@firefox_box
 Scenario:  Login
 Given I have logged into OneLogin
 Then I am logged into the OneLogin application
