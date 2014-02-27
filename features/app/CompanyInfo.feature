@@ -1,5 +1,6 @@
 Feature:  As a customer, I can update company information
 
+@sauce
 Scenario:  As a customer I can update my company information
 Given I am on the Company Information Page
 When I update my company information
