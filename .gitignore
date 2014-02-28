@@ -7,3 +7,4 @@ admin.json
 index.html
 logfiles/
 sauce/
+*.swp
