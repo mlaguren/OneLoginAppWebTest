@@ -5,7 +5,6 @@ Given I am on the Company Information Page
 When I update my company information
 Then my company information is updated
 
-@sauce
 Scenario:  As a customer, I can update the account owner
 Given I am on the Company Information Page
 When I change the Account Owner
