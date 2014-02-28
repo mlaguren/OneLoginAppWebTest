@@ -17,7 +17,7 @@ When(/^I call all the users in my account$/) do
 #  c.password = "x"
 #  c.perform
 #  @message =  c.body_str
-  ap "Need to find an alternative to run in Sauce Labs"
+#  ap "Need to find an alternative to run in Sauce Labs"
 end
 
 Then(/^I receive all the users in my account$/) do
