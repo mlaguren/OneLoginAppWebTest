@@ -11,12 +11,12 @@ Given(/^I have an api key$/) do
 end
 
 When(/^I call all the users in my account$/) do
-#  c = Curl::Easy.new("https://app.onelogin.us/api/v2/users.xml")
-#  c.http_auth_types = :basic
-#  c.username = "#{@api_key}"
-#  c.password = "x"
-#  c.perform
-#  @message =  c.body_str
+  c = Curl::Easy.new("https://app.onelogin.us/api/v2/users.xml")
+  c.http_auth_types = :basic
+  c.username = "#{@api_key}"
+  c.password = "x"
+  c.perform
+  @message =  c.body_str
 #  ap "Need to find an alternative to run in Sauce Labs"
 end
 
