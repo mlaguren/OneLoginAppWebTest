@@ -11,7 +11,8 @@ Given(/^I am on the Company Information Page$/) do
 end
 
 When(/^I update my company information$/) do
-  pending # express the regexp above with the code you wish you had
+  new_co_info = Company.new
+  p new_co_info
 end
 
 Then(/^my company information is updated$/) do
