@@ -1,4 +1,4 @@
 default: -r features/step_definitions -r features/support features
-production:  ENVIRONMENT="production"
+production:  --profile default ENVIRONMENT="production"
 parallel: --profile default --tags ~@wip 
 staging: --profile default ENVIRONMENT="staging"

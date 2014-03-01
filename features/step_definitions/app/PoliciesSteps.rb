@@ -1,7 +1,5 @@
 Given(/^my session timeout is set for "(.*?)"$/) do |timeout|
-  ap "Going To Home Page"
   FromLoginPage = LoginPage.new
-  ap "Logging In"
   FromLoginPage.login_as($SETUP["admin"]["email"], $SETUP["admin"]["password"])
 
   FromClientAppsPage = ClientAppsPage.new

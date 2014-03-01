@@ -20,10 +20,18 @@ Then(/^I need to reauthenticate$/) do
 end
 
 When(/^I authenticate with my credentials$/) do
-  FromLoginPage.login_as($SETUP["user"]["email"], $SETUP["user"]["password"])
+  FromLoginPage.login_as($SETUP["admin"]["email"], $SETUP["admin"]["password"])
 end
 
 Then(/^I am taken to my App$/) do
+  sleep 5 
+  windows = page.driver.browser.window_handles
+  if windows.length > 1
+    focus = windows.last
+    page.driver.browser.switch_to.window(focus)
+  end
   page.should have_no_content("Invalid app ID")
+  current_host.should_not include("onelogin")
+  current_path.should_not == "/client/apps"
 end
 

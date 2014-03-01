@@ -37,7 +37,7 @@ end
 
 Capybara.register_driver :firefox_extension do |app|
   profile = Selenium::WebDriver::Firefox::Profile.new
-  #profile.add_extension "/Users/melvinlaguren/Library/Application Support/Firefox/Profiles/xyw27iae.default/extensions/extension@onelogin.com.xpi"
+  profile.add_extension "extensions/extension@onelogin.com.xpi"
   Capybara::Selenium::Driver.new(app, :browser => :firefox, :profile => profile)
 end
 

@@ -1,6 +1,7 @@
 Feature:  As a OneLogin Customer, I can use OneLogin's API, so that I can develop Apps that work with OneLogin
 
 @firefox_box
+@firefox_extension
 Scenario:  A customer is able to make api calls
 Given I have an api key
 When I call all the users in my account
