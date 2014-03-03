@@ -21,3 +21,5 @@ gem "awesome_print", "~> 1.2.0"
 gem "imgkit"
 gem "show_me_the_cookies"
 gem "curb"
+gem "logger"
+

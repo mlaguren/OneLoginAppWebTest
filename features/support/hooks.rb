@@ -19,6 +19,14 @@ Before ('@zendesk') do |scenario|
   p tags
 end
 
+Before do |scenario|
+
+  Dir.mkdir('scenarios') unless File.exists?('scenarios')
+  logfile=scenario.name.gsub(/\s+/, "")
+  $log=Logger.new("scenarios/#{logfile}.log")
+  $log.debug("Start:  #{scenario.name}")
+end
+
 Before ('@sauce, @selenium_chrome') do |scenario|
   tags=scenario.source_tag_names
   p tags
@@ -31,4 +39,10 @@ Around('@fast') do |scenario, block|
   Timeout.timeout(360) do
     block.call
   end
+end
+
+After do
+
+  page.execute_script "window.close();"
+
 end

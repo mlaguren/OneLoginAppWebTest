@@ -17,6 +17,7 @@ When(/^I call all the users in my account$/) do
   c.password = "x"
   c.perform
   @message =  c.body_str
+  $log.debug("List of Users:  #{@message}")
 end
 
 Then(/^I receive all the users in my account$/) do
@@ -60,10 +61,10 @@ When(/^I change my api key$/) do
   FromCurrentPage = CurrentPage.new
   FromCurrentPage.select_from_settings_menu('API')
   @new_key = FromAPIPage.get_api_key 
-  p @new_key
 end
 
 Then(/^I get the same api call results$/) do
+  sleep 2
   c = Curl::Easy.new("https://app.onelogin.us/api/v2/users.xml")
   c.http_auth_types = :basic
   c.username = "#{@new_key}"

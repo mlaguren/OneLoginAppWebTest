@@ -58,6 +58,7 @@ GEM
       celluloid-io (>= 0.15.0)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
+    logger (1.2.8)
     lumberjack (1.0.4)
     mailosaur (0.0.6)
       json (= 1.7.6)
@@ -162,6 +163,7 @@ DEPENDENCIES
   guard-cucumber
   imgkit
   json (= 1.7.6)
+  logger
   mailosaur
   parallel_tests
   poltergeist (= 1.4.1)

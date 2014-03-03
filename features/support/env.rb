@@ -19,6 +19,9 @@ require 'imgkit'
 require 'socket'
 require 'show_me_the_cookies'
 require 'curb'
+require 'logger'
+
+
 Dir.glob(File.join("./OneLogin-PageObjects", "**", "*.rb")).each do |file|
   require file
 end
