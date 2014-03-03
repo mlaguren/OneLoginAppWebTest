@@ -41,8 +41,8 @@ Around('@fast') do |scenario, block|
   end
 end
 
-After do
-
-  page.execute_script "window.close();"
+After do |scenario|
+  $log.debug("Status:  #{scenario.status}")
+  
 
 end
