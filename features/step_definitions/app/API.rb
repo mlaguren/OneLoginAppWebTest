@@ -11,7 +11,9 @@ Given(/^I have an api key$/) do
 end
 
 When(/^I call all the users in my account$/) do
-  c = Curl::Easy.new("https://app.onelogin.us/api/v2/users.xml")
+  api_url="#{$SETUP['api']}v2/users.xml"
+  p "#{api_url}"
+  c = Curl::Easy.new(api_url)
   c.http_auth_types = :basic
   c.username = "#{@api_key}"
   c.password = "x"
@@ -46,7 +48,8 @@ Given(/^I have made an api call$/) do
   @api_key = FromAPIPage.get_api_key
   ap @api_key
 
-  c = Curl::Easy.new("https://app.onelogin.us/api/v2/users.xml")
+  api_url="#{$SETUP['api']}v2/users.xml"
+  c = Curl::Easy.new("api_url")
   c.http_auth_types = :basic
   c.username = "#{@api_key}"
   c.password = "x"
@@ -66,7 +69,8 @@ end
 
 Then(/^I get the same api call results$/) do
   sleep 2
-  c = Curl::Easy.new("https://app.onelogin.us/api/v2/users.xml")
+  api_url="#{$SETUP['api']}v2/users.xml"
+  c = Curl::Easy.new(api_url)
   c.http_auth_types = :basic
   c.username = "#{@new_key}"
   c.password = "x"

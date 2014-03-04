@@ -26,7 +26,7 @@ Dir.glob(File.join("./OneLogin-PageObjects", "**", "*.rb")).each do |file|
 end
 
 $SETUP = YAML::load(File.open("config/environments/#{ENV['ENVIRONMENT']}.yml"))
-
+p "#{$SETUP['api']}"
 I18n.enforce_available_locales = false
 
 Capybara.register_driver :selenium_chrome do |app|
