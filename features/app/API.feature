@@ -1,4 +1,5 @@
-Feature:  As a OneLogin Customer, I can use OneLogin's API, so that I can develop Apps that work with OneLogin
+Feature:  As a OneLogin Customer, I can use OneLogin's API,
+  so that I can develop applications and reports based on date in OneLogin
 
 @sauce
 @firefox_box
