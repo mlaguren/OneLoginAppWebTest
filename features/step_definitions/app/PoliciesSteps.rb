@@ -1,6 +1,6 @@
 Given(/^my session timeout is set for "(.*?)"$/) do |timeout|
   windows = page.driver.browser.window_handles
-  p windows.length
+  $log.debug("#{windows.length}")
   FromLoginPage = LoginPage.new
   FromLoginPage.login_as($SETUP["admin"]["email"], $SETUP["admin"]["password"])
 
