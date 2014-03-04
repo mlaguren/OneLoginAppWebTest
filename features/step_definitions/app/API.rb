@@ -17,6 +17,7 @@ When(/^I call all the users in my account$/) do
   c.password = "x"
   c.perform
   @message =  c.body_str
+  p @message
   $log.debug("List of Users:  #{@message}")
 end
 
