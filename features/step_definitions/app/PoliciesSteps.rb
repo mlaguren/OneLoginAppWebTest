@@ -1,6 +1,17 @@
 Given(/^my session timeout is set for "(.*?)"$/) do |timeout|
   windows = page.driver.browser.window_handles
   $log.debug("#{windows.length}")
+
+
+  windows = page.driver.browser.window_handles
+  p windows.length
+  if windows.length > 1
+    focus = windows.last
+    page.driver.browser.switch_to.window(focus)
+    page.driver.browser.close
+    page.driver.browser.window_handles.last
+  end
+
   FromLoginPage = LoginPage.new
   FromLoginPage.login_as($SETUP["admin"]["email"], $SETUP["admin"]["password"])
 

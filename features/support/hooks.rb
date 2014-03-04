@@ -25,12 +25,9 @@ Before do |scenario|
   logfile=scenario.name.gsub(/\s+/, "")
   $log=Logger.new("scenarios/#{logfile}.log")
   $log.debug("Start:  #{scenario.name}")
-
-  windows = page.driver.browser.window_handles
-  if windows.length > 1
-    focus = windows.first
-    page.driver.browser.switch_to.window(focus)
-  end  
+  
+  window_count = page.driver.browser.window_handles
+  @log.debug("#{window_count.length} window(s) open")
 end
 
 Before ('@sauce, @selenium_chrome') do |scenario|
@@ -49,6 +46,4 @@ end
 
 After do |scenario|
   $log.debug("Status:  #{scenario.status}")
-  
-
 end
