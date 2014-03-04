@@ -12,14 +12,13 @@ end
 
 When(/^I call all the users in my account$/) do
   api_url="#{$SETUP['api']}v2/users.xml"
-  p "#{api_url}"
+  $log.debug("Calling #{api_url}")
   c = Curl::Easy.new(api_url)
   c.http_auth_types = :basic
   c.username = "#{@api_key}"
   c.password = "x"
   c.perform
   @message =  c.body_str
-  p @message
   $log.debug("List of Users:  #{@message}")
 end
 
@@ -48,12 +47,15 @@ Given(/^I have made an api call$/) do
   @api_key = FromAPIPage.get_api_key
   ap @api_key
 
+
   api_url="#{$SETUP['api']}v2/users.xml"
-  c = Curl::Easy.new("api_url")
+  $log.debug("Calling #{api_url}")
+  c = Curl::Easy.new(api_url)
   c.http_auth_types = :basic
   c.username = "#{@api_key}"
   c.password = "x"
   c.perform
+
   @message =  c.body_str
 
 end
