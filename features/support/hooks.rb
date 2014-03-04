@@ -25,6 +25,12 @@ Before do |scenario|
   logfile=scenario.name.gsub(/\s+/, "")
   $log=Logger.new("scenarios/#{logfile}.log")
   $log.debug("Start:  #{scenario.name}")
+
+  windows = page.driver.browser.window_handles
+  if windows.length > 1
+    focus = windows.first
+    page.driver.browser.switch_to.window(focus)
+  end  
 end
 
 Before ('@sauce, @selenium_chrome') do |scenario|
