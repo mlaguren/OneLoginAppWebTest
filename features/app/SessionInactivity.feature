@@ -1,4 +1,4 @@
-Feature:  Users are signed out of OneLogin when inactive
+Feature:  Session Timeout
 
 @zendesk-28845
 @firefox_extension
