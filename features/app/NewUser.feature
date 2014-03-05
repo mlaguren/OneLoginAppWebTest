@@ -1,7 +1,7 @@
-Feature:  Adding new user's to OneLogin App
+Feature:  New User
 
 @new_user
-Scenario:  Admin add new user from new user page
+Scenario:  New User Created From User Page
 
 Given I am on the new user page
 When I create and invite the new user

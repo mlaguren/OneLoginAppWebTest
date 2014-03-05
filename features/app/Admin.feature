@@ -4,7 +4,7 @@ Feature:  Basic admin functionality
 @jira-2274
 @firefox_box
 @admin
-Scenario:  An admin can assume a user
+Scenario:  An Administrator Can Assume A Non Admin User 
 
 Given I am on the users page as an admin
 When I select a user that can be assumed

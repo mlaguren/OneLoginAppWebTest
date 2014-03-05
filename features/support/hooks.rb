@@ -20,7 +20,7 @@ Before ('@zendesk') do |scenario|
 end
 
 Before do |scenario|
-
+  ap scenario.feature.title
   Dir.mkdir('scenarios') unless File.exists?('scenarios')
   logfile=scenario.name.gsub(/\s+/, "")
   $log=Logger.new("scenarios/#{logfile}.log")
