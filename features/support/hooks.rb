@@ -27,7 +27,7 @@ Before do |scenario|
   $log.debug("Start:  #{scenario.name}")
   
   window_count = page.driver.browser.window_handles
-  @log.debug("#{window_count.length} window(s) open")
+  $log.debug("#{window_count.length} window(s) open")
 end
 
 Before ('@sauce, @selenium_chrome') do |scenario|
