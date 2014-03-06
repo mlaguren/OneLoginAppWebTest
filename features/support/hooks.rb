@@ -47,10 +47,8 @@ end
 
 After do |scenario|
   $log.debug("Status:  #{scenario.status}")
-  p scenario.status
   if scenario.status == :failed
     pic=scenario.name.gsub(/\s+/, "")
-    p pic
-    page.driver.browser.save_screenshot "scenarios/#{pic}.jpg"
+    page.save_screenshot "scenarios/#{pic}.jpg"
   end
 end
