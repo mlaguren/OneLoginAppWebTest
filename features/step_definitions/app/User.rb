@@ -1,8 +1,11 @@
-Given(/^I am on the users page$/) do
-  FromLoginPage = LoginPage.new
-  FromLoginPage.login_as($SETUP["user"]["email"], $SETUP["user"]["password"])
+When(/^I upload users$/) do
+  FromUsersPage = UsersPage.new
+  FromUsersPage.select_import_users_from_more_actions_menu
 
-  FromClientAppsPage = ClientAppsPage.new
-  FromClientAppsPage.select_Users
+  FromImportUsersPage = ImportUsersPage.new
+  FromImportUsersPage.upload_csv
+end
 
+Then(/^the uploaded users are created$/) do
+  find(:id, 'flashnotice').text.should == 'Users successfully imported'
 end
