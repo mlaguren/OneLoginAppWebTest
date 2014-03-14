@@ -1,7 +1,6 @@
 Feature:  Session Timeout
 
 @firefox_extension
-@firefox_box
 @zendesk-28845
 Scenario:  After being inactive, I need to sign back in when launching an application
 
