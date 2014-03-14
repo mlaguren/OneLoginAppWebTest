@@ -1,5 +1,6 @@
 Feature:  Import Users
 
+@firefox_box
 @admin
 Scenario:  An Admin Can Import Users
 
