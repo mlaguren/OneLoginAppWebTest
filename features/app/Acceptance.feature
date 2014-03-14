@@ -1,5 +1,6 @@
 Feature:  Basic set of functionality
 
+@firefox_box
 @firefox_extension
 Scenario:  A User Can Launch An Application
 Given I have logged into OneLogin
