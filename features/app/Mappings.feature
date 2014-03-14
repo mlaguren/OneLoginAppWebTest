@@ -7,6 +7,8 @@ Given I am on the mappings page
 When I try to create a blank mapping
 Then I cannot create a blank mapping 
 
+
+@firefox_box
 Scenario:  User Can Create A Mapping
 Given I am on the mappings page
 When I create a new mapping
