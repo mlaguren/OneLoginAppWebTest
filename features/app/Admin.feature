@@ -1,5 +1,6 @@
 Feature:  Basic admin functionality
 
+@sauce
 @zendesk-29652
 @jira-2274
 @firefox_box
