@@ -6,6 +6,6 @@ When(/^I upload users$/) do
   FromImportUsersPage.upload_csv
 end
 
-Then(/^the uploaded users are created$/) do
+Then(/^the uploaded users are successfully imported$/) do
   find(:id, 'flashnotice').text.should == 'Users successfully imported'
 end
