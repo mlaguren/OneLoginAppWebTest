@@ -41,6 +41,6 @@ Then(/^the uploaded user is added to the correct group$/) do
   FromImportPage.select_from_users_menu('All Users')
 
   FromAllUsersPage = AllUsersPage.new
-  FromAllUsersPage.search_for_user_in_group('User Name', 'Import Group')
+  FromAllUsersPage.select_user($new_user_to_group_csv.full_name)
   sleep 5
 end
