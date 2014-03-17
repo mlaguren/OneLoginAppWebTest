@@ -22,7 +22,16 @@ Before ('@NewUserCSV') do
   end
   $csvFile="new.csv"
 end
-    
+
+Before ('@NewUserGroupCSV') do
+  $new_user_to_group_csv=User.new
+  CSV.open("new_user_to_group.csv", "wb") do |csv|
+    csv << ["First name","Last name", "Group","Email"]
+    csv << ["#{$new_user_to_group_csv.first_name}","#{$new_user_to_group_csv.last_name}","Import Group","#{$new_user_to_group_csv.email}"]
+  end
+  $csvFile="new_user_to_group.csv"
+end
+
 Before ('@zendesk') do |scenario|
   tags=scenario.source_tag_names
   p tags

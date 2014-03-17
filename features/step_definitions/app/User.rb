@@ -21,9 +21,26 @@ Then(/^the uploaded user is successfully uploaded$/) do
 end
 
 Given(/^I want to import a user to a group$/) do
-  pending # express the regexp above with the code you wish you had
+  FromLoginPage = LoginPage.new
+  FromLoginPage.login_as($SETUP["admin"]["email"], $SETUP["admin"]["password"])
+  
+  FromClientAppsPage=ClientAppsPage.new
+  FromClientAppsPage.select_from_users_menu("Groups")
+
+  FromGroupsPage=GroupsPage.new
+  FromGroupsPage.verify_group('Import Group')
+
+  FromGroupsPage.select_from_users_menu('All Users')
+  sleep 5
 end
 
 Then(/^the uploaded user is added to the correct group$/) do
-  pending # express the regexp above with the code you wish you had
+  find(:id, 'flashnotice').text.should == 'Users successfully imported'
+
+  FromImportPage = ImportUsersPage.new
+  FromImportPage.select_from_users_menu('All Users')
+
+  FromAllUsersPage = AllUsersPage.new
+  FromAllUsersPage.search_for_user_in_group('User Name', 'Import Group')
+  sleep 5
 end
