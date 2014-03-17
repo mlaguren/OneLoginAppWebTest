@@ -15,10 +15,10 @@ Before ('@new_user') do
 end
 
 Before ('@NewUserCSV') do
-  import=User.new
+  $new_user_csv=User.new
   CSV.open("new.csv", "wb") do |csv|
     csv << ["First name","Last name", "email"]
-    csv << ["#{import.first_name}","#{import.last_name}","#{import.email}"]
+    csv << ["#{$new_user_csv.first_name}","#{$new_user_csv.last_name}","#{$new_user_csv.email}"]
   end
   $csvFile="new.csv"
 end
