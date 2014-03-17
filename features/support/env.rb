@@ -19,7 +19,7 @@ require 'socket'
 require 'show_me_the_cookies'
 require 'curb'
 require 'logger'
-
+require 'csv'
 
 Dir.glob(File.join("./OneLogin-PageObjects", "**", "*.rb")).each do |file|
   require file

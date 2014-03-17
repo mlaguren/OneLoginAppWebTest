@@ -12,3 +12,4 @@ sauce/
 scenarios/
 *.json
 *.png
+*.csv

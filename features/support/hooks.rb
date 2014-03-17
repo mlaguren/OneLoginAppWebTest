@@ -14,6 +14,15 @@ Before ('@new_user') do
   $user_type="user"
 end
 
+Before ('@NewUserCSV') do
+  import=User.new
+  CSV.open("new.csv", "wb") do |csv|
+    csv << ["First name","Last name", "email"]
+    csv << ["#{import.first_name}","#{import.last_name}","#{import.email}"]
+  end
+  $csvFile="new.csv"
+end
+    
 Before ('@zendesk') do |scenario|
   tags=scenario.source_tag_names
   p tags

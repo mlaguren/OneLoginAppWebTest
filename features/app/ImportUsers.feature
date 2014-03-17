@@ -2,6 +2,7 @@ Feature:  Import Users
 
 @firefox_box
 @admin
+@NewUserCSV
 Scenario:  An Admin Can Import Users
 
 Given I am on the users page as an admin
