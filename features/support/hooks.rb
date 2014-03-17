@@ -50,4 +50,5 @@ After do |scenario|
     pic=scenario.name.gsub(/\s+/, "")
     page.save_screenshot "scenarios/#{pic}.jpg"
   end
+  page.driver.browser.manage.delete_all_cookies
 end
