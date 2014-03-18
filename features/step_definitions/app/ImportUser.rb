@@ -39,7 +39,9 @@ Then(/^the uploaded user is added to the correct group$/) do
   FromImportPage.select_from_users_menu('All Users')
 
   FromAllUsersPage = AllUsersPage.new
+  FromAllUsersPage.search_by_name($new_user_to_group_csv.full_name)
   FromAllUsersPage.select_user($new_user_to_group_csv.full_name)
+  FromUsersPage.member_of_group('Import Group')
 end
 
 When(/^I update an existing with using a CSV file$/) do
