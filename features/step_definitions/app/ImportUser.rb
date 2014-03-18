@@ -46,6 +46,7 @@ end
 
 When(/^I update an existing with using a CSV file$/) do
   FromUsersPage = UsersPage.new
+  sleep 1
   FromUsersPage.select_import_users_from_more_actions_menu
 
   FromImportUsersPage = ImportUsersPage.new
