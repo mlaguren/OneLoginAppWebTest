@@ -69,3 +69,8 @@ Then(/^the user's information is updated$/) do
   FromAllUsersPage.verify_single_user($dupe_user_csv.email)
   FromAllUsersPage.select_user($dupe_user_csv.full_name)
 end
+
+Then(/^the csv file fails to load$/) do
+  FromImportUsersPage.failed_to_upload_message
+  FromImportUsersPage.display_reason
+end

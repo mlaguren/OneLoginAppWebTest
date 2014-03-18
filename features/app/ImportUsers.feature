@@ -26,3 +26,12 @@ Scenario:  An Admin Can Import A New User To A Group
 Given I want to import a user to a group
 When I upload the csv file
 Then the uploaded user is added to the correct group
+  
+@firefox_box
+@admin
+@BlankCSV
+Scenario:  Admin Imports Invalid CSV File
+Given I am on the users page as an admin
+When I upload the csv file
+Then the csv file fails to load
+

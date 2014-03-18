@@ -41,7 +41,16 @@ Before ('@DuplicateUserCSV') do
   $csvFile="dupe.csv"
 end
 
+Before ('@BlankCSV') do
+  CSV.open("blank.csv", "wb") do |csv|
+    csv << ["","",""]
+    csv <<["First","Last","Email"]
+  end
+  $csvFile="blank.csv"
+end
+
 Before ('@zendesk') do |scenario|
+  
   tags=scenario.source_tag_names
   p tags
 end
