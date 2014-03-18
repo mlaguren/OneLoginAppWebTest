@@ -32,6 +32,15 @@ Before ('@NewUserGroupCSV') do
   $csvFile="new_user_to_group.csv"
 end
 
+Before ('@DuplicateUserCSV') do 
+  $dupe_user_csv=User.new
+  CSV.open("dupe.csv", "wb") do |csv|
+    csv << ["First name","Last name", "email"]
+    csv << ["#{$dupe_user_csv.first_name}","#{$dupe_user_csv.last_name}","#{$dupe_user_csv.email}"]
+  end
+  $csvFile="dupe.csv"
+end
+
 Before ('@zendesk') do |scenario|
   tags=scenario.source_tag_names
   p tags

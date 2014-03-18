@@ -17,7 +17,6 @@ Then(/^the uploaded user is successfully uploaded$/) do
   $log.debug("Searching for #{$new_user_csv.full_name}")
   FromAllUsersPage.search_by_name($new_user_csv.full_name)
   FromAllUsersPage.returns_one_user($new_user_csv.full_name)
-  sleep 5
 end
 
 Given(/^I want to import a user to a group$/) do
@@ -31,7 +30,6 @@ Given(/^I want to import a user to a group$/) do
   FromGroupsPage.verify_group('Import Group')
 
   FromGroupsPage.select_from_users_menu('All Users')
-  sleep 5
 end
 
 Then(/^the uploaded user is added to the correct group$/) do
@@ -42,5 +40,29 @@ Then(/^the uploaded user is added to the correct group$/) do
 
   FromAllUsersPage = AllUsersPage.new
   FromAllUsersPage.select_user($new_user_to_group_csv.full_name)
-  sleep 5
+end
+
+When(/^I update an existing with using a CSV file$/) do
+  FromUsersPage = UsersPage.new
+  FromUsersPage.select_import_users_from_more_actions_menu
+
+  FromImportUsersPage = ImportUsersPage.new
+  FromImportUsersPage.upload_csv
+
+  update_name_in_csv
+
+  FromImportUsersPage.upload_csv
+
+end
+
+Then(/^the user's information is updated$/) do
+  find(:id, 'flashnotice').text.should == 'Users successfully imported'
+
+  FromImportPage = ImportUsersPage.new
+  FromImportPage.select_from_users_menu('All Users')
+
+  FromAllUsersPage = AllUsersPage.new
+  FromAllUsersPage.search_by_email($dupe_user_csv.email)
+  FromAllUsersPage.verify_single_user($dupe_user_csv.email)
+  FromAllUsersPage.select_user($dupe_user_csv.full_name)
 end
