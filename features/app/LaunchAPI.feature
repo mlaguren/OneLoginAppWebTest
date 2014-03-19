@@ -1,5 +1,6 @@
 Feature:  Launch API
 
+@selenium_chrome
 Scenario:  Launch App with Short Name
 
 Given I am on the launch page

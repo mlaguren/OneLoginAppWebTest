@@ -6,9 +6,9 @@ end
 When(/^I launch the app by the short name$/) do
   click_link('MeetUp App ID')
   FromLoginPage = LoginPage.new
-  p cookies[:session_onelogin.com]
+  announce_selenium_cookies(Capybara.current_session.driver.browser)
   FromLoginPage.login_as($SETUP["admin"]["email"], $SETUP["admin"]["password"])
-   announce_selenium_cookies(Capybara.current_session.driver.browser)
+  announce_selenium_cookies(Capybara.current_session.driver.browser)
   sleep 5
 end
 

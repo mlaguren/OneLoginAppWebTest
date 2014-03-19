@@ -7,9 +7,8 @@ Given I have logged into OneLogin
 When I launch an App
 Then I am taken to my App 
 
-@admin
-Scenario:  An Admin Can Edit An Existing App
-
-Given I have logged inot OneLogin
-When I edit a company app
-
+@firefox_box
+Scenario:  A User Can Toggle App View
+Given I am on the apps page
+When I toggle view
+Then I can toggle back
