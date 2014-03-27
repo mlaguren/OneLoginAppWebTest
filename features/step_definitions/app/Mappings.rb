@@ -15,7 +15,7 @@ When(/^I try to create a blank mapping$/) do
 end
 
 Then(/^I cannot create a blank mapping$/) do
-  find(:id, 'flasherror').text.should == "Name can't be blank x"
+  find(:xpath, ".//*[@id='flasherror']//*[@class='container']").text.should == "Name can't be blank"
 end
 
 When(/^I create a new mapping$/) do
