@@ -7,7 +7,7 @@ When(/^I upload the csv file$/) do
 end
 
 Then(/^the uploaded user is successfully uploaded$/) do
-  find(:id, 'flashnotice').text.should == 'Users successfully imported x'
+  find(:xpath, ".//*[@id='flashnotice']//*[@class='container']").text.should == 'Users successfully imported'
 
   FromImportPage = ImportUsersPage.new
   FromImportPage.select_from_users_menu('All Users')
@@ -33,7 +33,7 @@ Given(/^I want to import a user to a group$/) do
 end
 
 Then(/^the uploaded user is added to the correct group$/) do
-  find(:id, 'flashnotice').text.should == 'Users successfully imported'
+  find(:xpath, ".//*[@id='flashnotice']//*[@class='container']").text.should == 'Users successfully imported'
 
   FromImportPage = ImportUsersPage.new
   FromImportPage.select_from_users_menu('All Users')
