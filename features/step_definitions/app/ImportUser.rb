@@ -59,7 +59,7 @@ When(/^I update an existing with using a CSV file$/) do
 end
 
 Then(/^the user's information is updated$/) do
-  find(:id, 'flashnotice').text.should == 'Users successfully imported'
+  find(:id, ".//*[@id='flashnotice']//*[@class='container']").text.should == 'Users successfully imported'
 
   FromImportPage = ImportUsersPage.new
   FromImportPage.select_from_users_menu('All Users')
