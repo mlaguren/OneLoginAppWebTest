@@ -7,7 +7,7 @@ When(/^I upload the csv file$/) do
 end
 
 Then(/^the uploaded user is successfully uploaded$/) do
-  find(:id, 'flashnotice').text.should == 'Users successfully imported'
+  find(:id, 'flashnotice').text.should == 'Users successfully imported x'
 
   FromImportPage = ImportUsersPage.new
   FromImportPage.select_from_users_menu('All Users')

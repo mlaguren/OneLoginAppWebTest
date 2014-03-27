@@ -15,7 +15,7 @@ When(/^I try to create a blank mapping$/) do
 end
 
 Then(/^I cannot create a blank mapping$/) do
-  find(:id, 'flasherror').text.should == "Name can't be blank"
+  find(:id, 'flasherror').text.should == "Name can't be blank x"
 end
 
 When(/^I create a new mapping$/) do
