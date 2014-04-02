@@ -1,9 +1,10 @@
 Feature:  Admin grants privileges to user
 
+@OA-2578
 Scenario:  New user gets assume privileges
 Given I am on the new user page
 When I create a new user
-And I give the user "Assume Privileges"
+And I give the user "Assume users"
 Then the user has assume privileges
 
 
