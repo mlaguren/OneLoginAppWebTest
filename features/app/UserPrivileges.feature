@@ -1,5 +1,6 @@
 Feature:  Admin grants privileges to user
 
+@firefox_box
 @OA-2578
 Scenario:  New user gets assume privileges
 Given I am on the new user page

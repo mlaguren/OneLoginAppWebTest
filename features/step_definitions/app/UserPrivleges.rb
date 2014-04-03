@@ -14,5 +14,6 @@ When(/^I give the user "(.*?)"$/) do |privilege|
 end
 
 Then(/^the user has assume privileges$/) do
-  pending # express the regexp above with the code you wish you had
+  list = Privileges.new
+  list.entries.should include("Assume users")
 end
