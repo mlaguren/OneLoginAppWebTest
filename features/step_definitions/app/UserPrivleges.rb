@@ -10,7 +10,7 @@ end
 When(/^I give the user "(.*?)"$/) do |privilege|
   FromUserPage = UserPage.new
   FromUserPage.add_privilege(privilege)  
-  sleep 5
+  p privilege
 end
 
 Then(/^the user has assume privileges$/) do

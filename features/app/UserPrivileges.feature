@@ -10,6 +10,10 @@ Then the user has assume privileges
 
 
 Scenario:  New user gets manage group
+Given I am on the new user page
+When I create a new user
+  And I give the user "Manage group"
+Then the user has manage group privileges
 
 Scenario:  New user gets manage users
 
