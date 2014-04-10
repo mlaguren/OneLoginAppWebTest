@@ -7,7 +7,6 @@ Given I have logged into OneLogin
 When I launch an App
 Then I am taken to my App 
 
-@firefox_box
 Scenario:  A User Can Toggle App View
 Given I am on the apps page
 When I toggle view
