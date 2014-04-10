@@ -2,7 +2,6 @@ Feature:  Basic admin functionality
 
 @zendesk-29652
 @jira-2274
-@firefox_box
 @admin
 Scenario:  An Administrator Can Assume A Non Admin User 
 
