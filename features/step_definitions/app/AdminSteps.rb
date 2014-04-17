@@ -12,9 +12,11 @@ When(/^I select a user that can be assumed$/) do
 end
 
 Then(/^I can successfully assume the user$/) do
-  FromUserDetailPage = UserDetailPage.new
-  FromUserDetailPage.assume_user(@selected_user)
-  FromClientAppsPage = ClientAppsPage.new
+#  FromUserDetailPage = UserDetailPage.new
+#  FromUserDetailPage.assume_user(@selected_user)
+#  FromClientAppsPage = ClientAppsPage.new
+   FromEditUserPage = EditUserPage.new
+   FromEditUserPage.select_assume_user_from_more_actions_menu
 end
 
 Then(/^I can return back to admin$/) do

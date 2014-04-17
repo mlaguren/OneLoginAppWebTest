@@ -1,5 +1,6 @@
 Feature:  Basic admin functionality
 
+@firefox_box
 @zendesk-29652
 @jira-2274
 @admin
