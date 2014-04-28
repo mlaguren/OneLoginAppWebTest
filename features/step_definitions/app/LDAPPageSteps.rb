@@ -9,5 +9,9 @@ Given(/^my account is connected via the LDAP connector$/) do
   FromDirectoriesPage = DirectoriesPage.new
   FromDirectoriesPage.select_directory_type('LDAP via Connector')
   
+  ldap_server = LdapServer.new 
+
+  FromLdapConnectorPage = LdapConnectorPage.new
+  FromLdapConnectorPage.enter_directory_name(ldap_server)
   sleep 5  
 end
