@@ -21,4 +21,4 @@ gem "imgkit"
 gem "show_me_the_cookies"
 gem "curb"
 gem "logger"
-
+gem 'websocket-driver', '0.3.2'
