@@ -18,3 +18,11 @@ Given(/^my account is connected via the LDAP connector$/) do
   
   sleep 5  
 end
+
+When(/^I add a user to LDAP$/) do
+  pending # express the regexp above with the code you wish you had
+end
+
+Then(/^the user is added OneLogin$/) do
+  pending # express the regexp above with the code you wish you had
+end
