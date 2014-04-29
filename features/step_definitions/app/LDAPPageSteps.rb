@@ -13,5 +13,8 @@ Given(/^my account is connected via the LDAP connector$/) do
 
   FromLdapConnectorPage = LdapConnectorPage.new
   FromLdapConnectorPage.enter_directory_name(ldap_server)
+  token = FromLdapConnectorPage.get_installation_token
+  
+  
   sleep 5  
 end
